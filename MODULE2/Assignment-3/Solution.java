@@ -3,11 +3,11 @@
 */
 import java.util.Scanner;
 
-public class Solution {
+public final class Solution {
     /*
     Do not modify this main function.
     */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         /*
           Main function
         */
@@ -20,7 +20,7 @@ public class Solution {
     /*
     Need to write the power function and print the output.
     */
-    static long power(int b, int e) {
+    static long power(final int b, final int e) {
         /*
           Long Power
         */
