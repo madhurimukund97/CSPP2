@@ -1,8 +1,9 @@
+
 import java.util.Scanner;
 import java.lang.Math;
 
 public final class Solution {
-    /*
+    /**
     Do not modify this main function.
     */
     public static void main(final String[] args) {
@@ -12,7 +13,7 @@ public final class Solution {
         int c = scan.nextInt();
         rootsOfQuadraticEquation(a, b, c);  
     }
-    /*
+    /**
     Need to write the rootsOfQuadraticEquation function and print the output.
     */
     static void rootsOfQuadraticEquation(final int a, final int b, final int c) {
