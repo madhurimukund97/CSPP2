@@ -24,9 +24,9 @@ public class Solution {
         // System.out.println(c);
         // System.out.println((Math.sqrt((b*b)-4*a*c)));
         double var1 = (b * b) - (4 * a * c);
-        root1 = ((- b) + Math.sqrt(var1)) / (2 * a);
-        root2 = ((- b) - Math.sqrt(var1)) / (2 * a);
-        System.out.println(root1 +" "+ root2);
+        root1 = ((-b) + Math.sqrt(var1)) / (2 * a);
+        root2 = ((-b) - Math.sqrt(var1)) / (2 * a);
+        System.out.println(root1 + " " + root2);
         // System.out.println(root2);
     }
 }
