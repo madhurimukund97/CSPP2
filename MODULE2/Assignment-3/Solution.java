@@ -1,8 +1,11 @@
 import java.util.Scanner;
 /**
- * @author     madhuri
- */
+ * @author madhuri
+*/
 public final class Solution {
+    /**
+     * @constructor
+    */
     private Solution() {
         //I am not using this constructor
     }
