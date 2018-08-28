@@ -1,4 +1,3 @@
-
 /**
  Power class
 */
@@ -22,10 +21,8 @@ public final class Solution {
     }
     /**
     Need to write the power function and print the output.
-    
     @param      b     { parameter_description }
     @param      e     { parameter_description }
-    
     @return     { description_of_the_return_value }
     */
     static long power(final int b, final int e) {
