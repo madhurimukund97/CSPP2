@@ -14,7 +14,7 @@ public class Solution {
 	/*
 	Need to write the power function and print the output.
 	*/
-	static int power(int b, int e){
+	static long power(int b, int e){
 		if(e > 0)
 			return b*power(b,e-1);
 		return 1;
