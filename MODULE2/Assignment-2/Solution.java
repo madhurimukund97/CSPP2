@@ -13,11 +13,10 @@ public final class Solution {
         int a = scan.nextInt();
         int b = scan.nextInt();
         int c = scan.nextInt();
-        rootsOfQuadraticEquation(a, b, c);  
+        rootsOfQuadraticEquation(a, b, c);
     }
     /**
     Need to write the rootsOfQuadraticEquation function and print the output.
-    
     @param      a     { parameter_description }
     @param      b     { parameter_description }
     @param      c     { parameter_description }
