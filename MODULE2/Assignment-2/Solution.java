@@ -5,8 +5,11 @@ import java.lang.Math;
 public final class Solution {
     /**
     Do not modify this main function.
+    
+    @param      args  The arguments
     */
     public static void main(final String[] args) {
+
         Scanner scan = new Scanner(System.in);
         int a = scan.nextInt();
         int b = scan.nextInt();
@@ -15,8 +18,13 @@ public final class Solution {
     }
     /**
     Need to write the rootsOfQuadraticEquation function and print the output.
+    
+    @param      a     { parameter_description }
+    @param      b     { parameter_description }
+    @param      c     { parameter_description }
     */
     static void rootsOfQuadraticEquation(final int a, final int b, final int c) {
+
         double root1;
         double root2;
         // System.out.println(a);
