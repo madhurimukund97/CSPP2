@@ -6,7 +6,7 @@ public final class Solution {
     /**
      * @constructor
     */
-    private Solution(){
+    private Solution() {
         //I am not using this constructor
     }
     /**
@@ -21,7 +21,7 @@ public final class Solution {
         int a = scan.nextInt();
         int b = scan.nextInt();
         int c = scan.nextInt();
-        rootsOfQuadraticEquation(a, b, c);
+        roots(a, b, c);
     }
     /**
     Need to write the rootsOfQuadraticEquation function and print the output.
@@ -29,7 +29,7 @@ public final class Solution {
     @param      b     { parameter_description }
     @param      c     { parameter_description }
     */
-    static void rootsOfQuadraticEquation(final int a, final int b, final int c) {
+    static void roots(final int a, final int b, final int c) {
         double root1;
         double root2;
         double var1 = (b * b) - (4 * a * c);
