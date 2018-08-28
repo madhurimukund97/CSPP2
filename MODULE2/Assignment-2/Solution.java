@@ -1,11 +1,11 @@
 import java.util.Scanner;
 import java.lang.Math;
 
-public class Solution {
+public final class Solution {
     /*
     Do not modify this main function.
     */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         int a = scan.nextInt();
         int b = scan.nextInt();
@@ -15,7 +15,7 @@ public class Solution {
     /*
     Need to write the rootsOfQuadraticEquation function and print the output.
     */
-    static void rootsOfQuadraticEquation(int a, int b, int c) {
+    static void rootsOfQuadraticEquation(final int a, final int b, final int c) {
         double root1;
         double root2;
         // System.out.println(a);
