@@ -32,8 +32,7 @@ public final class Solution {
     static void roots(final int a, final int b, final int c) {
         double root1;
         double root2;
-        int x = 4;
-        double var1 = (b * b) - (x * a * c);
+        double var1 = (b * b) - (2 * 2 * a * c);
         root1 = ((-b) + Math.sqrt(var1)) / (2 * a);
         root2 = ((-b) - Math.sqrt(var1)) / (2 * a);
         System.out.println(root1 + " " + root2);
