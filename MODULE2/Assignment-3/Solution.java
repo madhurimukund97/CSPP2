@@ -1,16 +1,18 @@
 
 /**
-   Power class
+ Power class
 */
 import java.util.Scanner;
 
 public final class Solution {
     /**
     Do not modify this main function.
+    
+    @param      args  The arguments
     */
     public static void main(final String[] args) {
         /**
-          Main function
+         Main function
         */
         Scanner s = new Scanner(System.in);
         int base = s.nextInt();
@@ -20,10 +22,15 @@ public final class Solution {
     }
     /**
     Need to write the power function and print the output.
+    
+    @param      b     { parameter_description }
+    @param      e     { parameter_description }
+    
+    @return     { description_of_the_return_value }
     */
     static long power(final int b, final int e) {
         /**
-          Long Power
+         Long Power
         */
         if (e > 0) {
             return b * power(b, e - 1);
