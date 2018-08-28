@@ -1,8 +1,7 @@
-/**
- Power class
-*/
 import java.util.Scanner;
-
+/**
+ * @author madhuri
+*/
 public final class Solution {
     /**
     Do not modify this main function.
