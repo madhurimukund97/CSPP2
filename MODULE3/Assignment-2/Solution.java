@@ -15,10 +15,10 @@ public final class Solution {
         	j = i;
         	while (j != 0)
         	{
-            	if (j % ((2*2+1) * 2) == ((2+1) * 2 + 1)){
+            	if (j % ((2 * 2 + 1) * 2) == ((2 + 1) * 2 + 1)){
                 	count++;
             	}
-            	j /= ((2*2+1) * 2);
+            	j /= ((2 * 2 + 1) * 2);
         	}
     	}
     	System.out.println(count);
