@@ -24,7 +24,7 @@ public final class Solution {
         /**
          Main function
         */
-        Scanner s = new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);
         int n1 = s.nextInt();
         int n2 = s.nextInt();
         gcd(n1, n2);
@@ -40,8 +40,8 @@ public final class Solution {
      */
     static void gcd(final int n1, final int n2) {
         
-        for(int i=1; i <= n1 && i<=n2; i++) {
-            if(n1 % i == 0 && n2 % i == 0) {
+        for (int i = 1; i <= n1 && i <= n2; i++) {
+            if (n1 % i == 0 && n2 % i == 0) {
                 gcd = i;
             }
         }
