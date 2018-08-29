@@ -14,6 +14,12 @@ public final class Solution {
     @param      args  The arguments
     */
     static int gcd = 1;
+
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
     public static void main(String[] args) {
         /**
          Main function
@@ -26,7 +32,6 @@ public final class Solution {
     /*
 	Need to write the gcd function and print the output.
 	*/
-
     /**
      * { function_description }
      *
