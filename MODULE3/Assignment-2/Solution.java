@@ -3,8 +3,8 @@ import java.util.Scanner;
  * @author madhuri
 */
 public final class Solution {
-	/**
-    * @constructor
+    /**
+     * @constructor
     */
     private Solution() {
         //I am not using this constructor
