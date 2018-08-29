@@ -19,17 +19,17 @@ public final class Solution {
     */
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
-    	int i = 0, j = 1;
-    	int count = 0;
-    	for (i = 1; i <= n; i++) {
-        	j = i;
-        	while (j != 0) {
-            	if (j % ((2 * 2 + 1) * 2) == ((2 + 1) * 2 + 1)) {
-                	count++;
-            	}
-            	j /= ((2 * 2 + 1) * 2);
-        	}
-    	}
-    	System.out.println(count);
-	}
+        int i = 0, j = 1;
+        int count = 0;
+        for (i = 1; i <= n; i++) {
+            j = i;
+            while (j != 0) {
+                if (j % ((2 * 2 + 1) * 2) == ((2 + 1) * 2 + 1)) {
+                    count++;
+                }
+                j /= ((2 * 2 + 1) * 2);
+            }
+        }
+        System.out.println(count);
+    }
 }
