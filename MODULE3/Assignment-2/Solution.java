@@ -21,13 +21,15 @@ public final class Solution {
         int n = s.nextInt();
         int i = 0, j = 1;
         int count = 0;
+        final int a = 10;
+        final int b = 7;
         for (i = 1; i <= n; i++) {
             j = i;
             while (j != 0) {
-                if (j % 10 == 7) {
+                if (j % a == b) {
                     count++;
                 }
-                j /= 10;
+                j /= a;
             }
         }
         System.out.println(count);
