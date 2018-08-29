@@ -15,9 +15,9 @@ public final class Solution {
         	j = i;
         	while (j != 0)
         	{
-            	if (j % (5*2) == (3*2+1))
+            	if (j % (5 * 2) == (3 * 2 + 1))
                 	count ++;
-            	j /= (5*2);
+            	j /= (5 * 2);
         	}
     	}
     	System.out.println(count);
