@@ -10,12 +10,10 @@ public final class Solution {
         int n = s.nextInt();
     	int i = 0, j = 1;
     	int count = 0;
-    	for (i = 1; i <= n; i ++)
-    	{
+    	for (i = 1; i <= n; i ++) {
         	j = i;
-        	while (j != 0)
-        	{
-            	if (j % ((2 * 2 + 1) * 2) == ((2 + 1) * 2 + 1)){
+        	while (j != 0) {
+            	if (j % ((2 * 2 + 1) * 2) == ((2 + 1) * 2 + 1)) {
                 	count++;
             	}
             	j /= ((2 * 2 + 1) * 2);
