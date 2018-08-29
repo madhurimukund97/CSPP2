@@ -15,7 +15,7 @@ public final class Solution {
     */
     private static int gcd = 1;
 
-    /**
+    /**.
      * { function_description }
      *
      * @param      args  The arguments
@@ -29,7 +29,7 @@ public final class Solution {
         int n2 = s.nextInt();
         gcd(n1, n2);
     }
-    /**
+    /**.
      * { function_description }
      *
      * @param      n1    The n 1
