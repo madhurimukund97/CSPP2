@@ -13,8 +13,13 @@ public final class Solution {
     Do not modify this main function.
     @param      args  The arguments
     */
-    /* Fill the main function to print resultant of addition of matrices*/
+    /*
+     * Fill the main function to print resultant of addition of matrices
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
+
         int m, n, o, p;
         int[][] array1, array2, sum;
         Scanner s = new Scanner(System.in);
@@ -46,11 +51,12 @@ public final class Solution {
                     if (d != n - 1) {
                         System.out.print(sum[c][d] + " ");
                     } else {
-                        System.out.print(sum[c][d]); }
+                        System.out.print(sum[c][d]);
+                    }
                 } System.out.println();
             }
         } else {
-        	System.out.println("not possible");
+            System.out.println("not possible");
         }
     }
 }
