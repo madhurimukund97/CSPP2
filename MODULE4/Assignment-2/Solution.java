@@ -46,10 +46,14 @@ public final class Solution {
                     if (d != n - 1) {
                     	System.out.print(sum[c][d] + " ");
                     }
-                    else {System.out.print(sum[c][d]);}
+                    else { 
+                    	System.out.print(sum[c][d]);
+                    }
                 } System.out.println();
             }
         }
-        else System.out.println("not possible");
+        else { 
+        	System.out.println("not possible");
+        }
     }
 }
