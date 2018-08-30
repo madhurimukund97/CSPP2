@@ -7,21 +7,21 @@ public class Solution {
         Scanner s = new Scanner(System.in);
         m = s.nextInt();
         n = s.nextInt();
-        o = s.nextInt();
-        p = s.nextInt();
         array1 = new int[m][n];
-        array2 = new int[o][p];
-        sum = new int[m][n];
         for (int c = 0 ; c < m ; c++) {
             for (int d = 0 ; d < n ; d++) {
                 array1[c][d] = s.nextInt();
             }
         }
+        o = s.nextInt();
+        p = s.nextInt();
+        array2 = new int[o][p];
         for (int c = 0 ; c < o ; c++) {
             for (int d = 0 ; d < p ; d++) {
                 array2[c][d] = s.nextInt();
             }
         }
+        sum = new int[m][n];
         if (m == o && n == p) {
             for (int c = 0 ; c < o ; c++) {
                 for (int d = 0 ; d < p ; d++) {
