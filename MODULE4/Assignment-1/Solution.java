@@ -2,12 +2,17 @@ import java.util.Scanner;
 /**
  * @author madhuri
  */
-class Solution {
-/**.
-Fill this main function to print maximum of given array
-
-@param      args  The arguments
-*/
+public final class Solution {
+	/**
+     * @constructor
+    */
+    private Solution() {
+        //I am not using this constructor
+    }
+    /**
+    Do not modify this main function.
+    @param      args  The arguments
+    */
     public static void main(final String[] args) {
 
         int n;
