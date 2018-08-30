@@ -9,17 +9,17 @@ public final class Solution {
     private Solution() {
         //I am not using this constructor
     }
-    /**
+    /**.
     Do not modify this main function.
     @param      args  The arguments
     */
-    /*
+    /**.
      * Fill the main function to print resultant of addition of matrices
      *
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
-    /**
+    /**.
      * main
     */
         int m, n, o, p;
