@@ -1,5 +1,8 @@
 import java.util.Scanner;
-public final class Solution {
+/**
+ * @author madhuri
+ */
+class Solution {
 /**.
 Fill this main function to print maximum of given array
 
