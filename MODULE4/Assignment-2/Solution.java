@@ -44,15 +44,13 @@ public final class Solution {
             for (int c = 0; c < o; c++) {
                 for (int d = 0; d < p; d++) {
                     if (d != n - 1) {
-                    	System.out.print(sum[c][d] + " ");
-                    }
-                    else { 
-                    	System.out.print(sum[c][d]);
-                    }
+                        System.out.print(sum[c][d] + " "); }
+                    else {
+                    	System.out.print(sum[c][d]); }
                 } System.out.println();
             }
         }
-        else { 
+        else {
         	System.out.println("not possible");
         }
     }
