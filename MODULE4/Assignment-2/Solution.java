@@ -19,7 +19,9 @@ public final class Solution {
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
-
+    	/**
+    	 * main
+    	 */
         int m, n, o, p;
         int[][] array1, array2, sum;
         Scanner s = new Scanner(System.in);
