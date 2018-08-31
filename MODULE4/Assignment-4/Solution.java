@@ -6,10 +6,11 @@ public final class Solution {
     /**
      Do not modify the main function
     */
+     private static String reverse = "";
     /**
      * @constructor
     */
-    private static String reverse = "";
+    
     private Solution() {
         //I am not using this constructor
     }
