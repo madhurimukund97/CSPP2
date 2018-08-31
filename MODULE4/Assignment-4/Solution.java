@@ -1,4 +1,7 @@
 import java.util.Scanner;
+/**
+ * @author madhuri
+ */
 public final class Solution {
     /**
      Do not modify the main function
