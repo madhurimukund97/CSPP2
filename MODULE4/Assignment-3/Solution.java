@@ -1,7 +1,8 @@
-// Given an String, Write a java method that returns the decimal value for the given binary string.
+// Given an String, Write a java method that returns the
+// decimal value for the given binary string.
 import java.util.Scanner;
 /**
- * @author madhuri
+ * @author madhuri.
  */
 public final class Solution {
 	/**
@@ -12,7 +13,7 @@ public final class Solution {
 	}
 
 	/**
-	 * { function_description }
+	 * { function_description }.
 	 *
 	 * @param      args  The arguments
 	 */
@@ -27,21 +28,21 @@ public final class Solution {
 		}	
 	}
 	/**
-	 * { function_description }
+	 * { function_description }.
 	 *
 	 * @param      s     { parameter_description }
 	 *
 	 * @return     { description_of_the_return_value }
 	 */
 	public static String binaryToDecimal(final String s) {
-		double result = 0;
+		double res = 0;
 		for (int i = 0; i < s.length(); i++) {
 			char c = s.charAt(i);
 			int number = Character.getNumericValue(c);
-			result = result + (number * Math.pow(2, (s.length() - 1) - i));
+			res = res + (number * Math.pow(2, (s.length() - 1) - i));
 		}
-		int result1 = (int) result;
-		String res = Integer.toString(result1);
-		return res;
+		int result1 = (int) res;
+		String res2 = Integer.toString(result1);
+		return res2;
 	}
 }
