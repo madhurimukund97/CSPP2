@@ -1,12 +1,12 @@
 import java.util.Scanner;
-public class Solution {
+public final class Solution {
     /**
-     Do not modify the main function 
+     Do not modify the main function
     */
     /**
      * @constructor
     */
-    static String reverse = "";
+    private static String reverse = "";
     private Solution() {
         //I am not using this constructor
     }
@@ -19,7 +19,7 @@ public class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
     /**.
      * main
     */
@@ -30,9 +30,11 @@ public class Solution {
     }
 
     /**
-     * { function_description }
+     * { function_description }.
      *
-     * @param      s     { parameter_description }
+     * @param      s     { reverse a string }
+     *
+     * @return     reverse
      */
     public static String reverseString(final String s) {
         char[] array = s.toCharArray();
