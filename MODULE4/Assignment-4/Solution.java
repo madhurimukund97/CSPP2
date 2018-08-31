@@ -3,14 +3,13 @@ import java.util.Scanner;
  * @author madhuri
  */
 public final class Solution {
-    /**
+    /**.
      Do not modify the main function
     */
      private static String reverse = "";
     /**
      * @constructor
     */
-    
     private Solution() {
         //I am not using this constructor
     }
