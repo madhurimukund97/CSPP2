@@ -7,12 +7,12 @@ import java.util.Scanner;
 class InputValidator {
     /*Write the atrributes and methods for InputValidator*/
     /**
-     * { var_description }
+     * { var_description }.
      */
     private String str2;
     public InputValidator(final String str1) {
     /**
-     * { input validator }
+     * { input validator }.
      */
         this.str2 = str1;
     }
@@ -24,9 +24,8 @@ class InputValidator {
         int strlength = str2.length();
         if (strlength >= var) {
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 }
 public final class Solution {
