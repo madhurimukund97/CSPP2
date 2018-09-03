@@ -11,9 +11,15 @@ class InputValidator {
      */
     private String str2;
     public InputValidator(final String str1) {
+    /**
+     * { input validator }
+     */
         this.str2 = str1;
     }
     public boolean validateData() {
+    /**
+     * { validate data }
+     */
         final int var = 6;
         int strlength = str2.length();
         if (strlength >= var) {
