@@ -10,7 +10,7 @@ class InputValidator {
      * { var_description }
      */
     private String str2;
-    final static int var = 6;
+    final int var = 6;
     public InputValidator(final String str1) {
         this.str2 = str1;
     }
