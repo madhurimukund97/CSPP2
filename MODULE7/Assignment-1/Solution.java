@@ -15,7 +15,7 @@ class InputValidator {
      *
      * @param      str1  The string 1
      */
-    public InputValidator(final String str1) {
+    protected InputValidator(final String str1) {
     /**
      * { input validator }.
      */
