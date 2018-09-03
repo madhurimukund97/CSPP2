@@ -22,7 +22,7 @@ class InputValidator {
         this.str2 = str1;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @return     { description_of_the_return_value }
      */
