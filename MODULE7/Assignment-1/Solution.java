@@ -28,6 +28,9 @@ class InputValidator {
         return false;
     }
 }
+/**
+ * { item_description }
+ */
 public final class Solution {
     /**
      * @constructor
