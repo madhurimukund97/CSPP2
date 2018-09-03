@@ -10,11 +10,11 @@ class InputValidator {
      * { var_description }
      */
     private String str2;
-    final int var = 6;
     public InputValidator(final String str1) {
         this.str2 = str1;
     }
     public boolean validateData() {
+        final int var = 6;
         int strlength = str2.length();
         if (strlength >= var) {
             return true;
