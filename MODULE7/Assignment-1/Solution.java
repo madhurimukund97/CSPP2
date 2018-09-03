@@ -6,9 +6,12 @@ import java.util.Scanner;
  */
 class InputValidator {
     /*Write the atrributes and methods for InputValidator*/
-    String str2;
+    /**
+     * { var_description }
+     */
+    private String str2;
     final static int var = 6;
-    public InputValidator (final String str1) {
+    public InputValidator(final String str1) {
         this.str2 = str1;
     }
     public boolean validateData() {
