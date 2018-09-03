@@ -1,17 +1,19 @@
 import java.util.Scanner;
 /**
- * @author madhuri
+ * @author     madhuri
+ *
+ * Class for input validator.
  */
 class InputValidator {
     /*Write the atrributes and methods for InputValidator*/
     String str2;
-    final static int six = 6;
-    public InputValidator (String str1) {
+    final static int var = 6;
+    public InputValidator (final String str1) {
         this.str2 = str1;
     }
     public boolean validateData() {
         int strlength = str2.length();
-        if (strlength >= six) {
+        if (strlength >= var) {
             return true;
         } else {
             return false;
