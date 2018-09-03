@@ -10,12 +10,22 @@ class InputValidator {
      * { var_description }.
      */
     private String str2;
+    /**
+     * Constructs the object.
+     *
+     * @param      str1  The string 1
+     */
     public InputValidator(final String str1) {
     /**
      * { input validator }.
      */
         this.str2 = str1;
     }
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean validateData() {
     /**
      * { validate data }
@@ -29,7 +39,7 @@ class InputValidator {
     }
 }
 /**
- * { item_description }
+ * { item_description }.
  */
 public final class Solution {
     /**
