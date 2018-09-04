@@ -314,9 +314,9 @@ public class List {
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
                 case "addAll":
-                int res[] = new int[tokens.length - 1];
+                int[] res = new int[tokens.length - 1];
                 int res1 = 0, length = tokens.length;
-                for (int i = 1; i< length; i++) {
+                for (int i = 1; i < length; i++) {
                     res[res1] = Integer.parseInt(tokens[i]);
                     res1 += 1;
                 }
