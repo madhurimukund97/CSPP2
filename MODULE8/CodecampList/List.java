@@ -143,7 +143,14 @@ public class List {
     // public void addAll(int[] items) {
 
     // }
-    public void add(int index, int item) {
+
+    /**
+     * { function_description }
+     *
+     * @param      index  The index
+     * @param      item   The item
+     */
+    public void add(final int index, final int item) {
         for (int i = index + 1; i < size + 1; i++) {
             arr[index] = arr[index - 1];
         }
@@ -151,7 +158,14 @@ public class List {
         size += 1;
     }
 
-    public int count(int item){
+    /**
+     * { function_description }
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int count(final int item) {
         int count = 0;
         for (int i = 0; i < size; i++) {
             if (item == arr[i]) {
