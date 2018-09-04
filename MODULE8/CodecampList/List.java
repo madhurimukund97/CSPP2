@@ -328,8 +328,7 @@ public class List {
                 case "add":
                     if (tokens.length <= 2) {
                         l.add(Integer.parseInt(tokens[1]));
-                    }
-                    else {
+                    } else {
                         l.add(Integer.parseInt(tokens[1]),
                             Integer.parseInt(tokens[2]));
                     }
