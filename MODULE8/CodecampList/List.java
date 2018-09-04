@@ -53,7 +53,8 @@ public class List {
     /**
      * @author "madhuri".
     */
-    
+    private int[] arr;
+    private int size;
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
@@ -61,9 +62,7 @@ public class List {
     /**
      * The purpose of the constructor is to initialize the class variables with
      * some default values.
-     */
-    private int[] arr;
-    private int size;
+    */
     public List() {
 
         // what are the two variables to be initialized here?
