@@ -140,22 +140,26 @@ public class List {
             System.out.println("Invalid Position Exception");
         }
     }
-    // public void addAll(int[] item) {
+    // public void addAll(int[] items) {
 
     // }
-    // public void add(int index, int item) {
+    public void add(int index, int item) {
+        for (int i = index + 1; i < size + 1; i++) {
+            arr[index] = arr[index - 1];
+        }
+        arr[index] = item;
+        size += 1;
+    }
 
-    // }
-
-    // public int count(int item){
-    //     int count = 0;
-    //     for (int i = 0; i < size; i++) {
-    //         if (item == arr[i]) {
-    //             count += 1;
-    //         }
-    //     }
-    //     return count;
-    // }
+    public int count(int item){
+        int count = 0;
+        for (int i = 0; i < size; i++) {
+            if (item == arr[i]) {
+                count += 1;
+            }
+        }
+        return count;
+    }
 
     /**
      * Get method has to return the items that is at the index position passed
