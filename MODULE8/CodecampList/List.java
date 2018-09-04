@@ -159,7 +159,7 @@ public class List {
     }
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      item  The item
      *
