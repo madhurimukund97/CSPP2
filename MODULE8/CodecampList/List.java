@@ -145,7 +145,7 @@ public class List {
     // }
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      index  The index
      * @param      item   The item
@@ -163,7 +163,7 @@ public class List {
      *
      * @param      item  The item
      *
-     * @return     { description_of_the_return_value }
+     * @return     { description_of_the_return_value }.
      */
     public int count(final int item) {
         int count = 0;
