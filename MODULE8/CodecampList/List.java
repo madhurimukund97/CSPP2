@@ -146,7 +146,7 @@ public class List {
      *
      * @param      items  The items
      */
-    public void addAll(int[] items) {
+    public void addAll(final int[] items) {
         int res = 0;
         int len = items.length + size;
         for (int i = size; i < len; i++) {
@@ -330,7 +330,8 @@ public class List {
                         l.add(Integer.parseInt(tokens[1]));
                     }
                     else {
-                        l.add(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
+                        l.add(Integer.parseInt(tokens[1]),
+                            Integer.parseInt(tokens[2]));
                     }
                 break;
                 default:
