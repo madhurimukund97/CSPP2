@@ -134,7 +134,7 @@ public class List {
             size--;
             arr[size] = 0;
         } else {
-            System.out.println("Invalid Position Execption");
+            System.out.println("Invalid Position Exception");
         }
     }
     /**
