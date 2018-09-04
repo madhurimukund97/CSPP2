@@ -53,9 +53,6 @@ public class List {
     /**
      * @author "madhuri".
     */
-    /**
-     * @return 
-    */
     private int[] arr;
     private int size;
     // declare a private int size
