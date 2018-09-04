@@ -51,7 +51,7 @@ public class List {
      *
      */
     /**
-     * @author "madhuri"
+     * @author "madhuri".
     */
     private int[] arr;
     private int size;
@@ -181,7 +181,7 @@ public class List {
         }
         return str + arr[size - 1] + "]";
     }
-    /**
+    /**.
      * Contains return true if the list has the item passed as an argument to
      * the method So, iterate through the list and return true if the item
      * exists and otherwise false
