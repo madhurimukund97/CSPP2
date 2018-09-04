@@ -50,6 +50,9 @@ public class List {
      * to be accessed by the methods that are outside of the List class.
      *
      */
+    /**
+     * @author "madhuri"
+    */
     private int[] arr;
     private int size;
     // declare a private int size
@@ -185,7 +188,7 @@ public class List {
      *
      * @param      item  The item
      *
-     * @return     { description_of_the_return_value }
+     * @return     { description_of_the_return_value }.
      */
     public boolean contains(final int item) {
         // Replace the code below
