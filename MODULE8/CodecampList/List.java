@@ -140,9 +140,21 @@ public class List {
             System.out.println("Invalid Position Exception");
         }
     }
-    // public void addAll(int[] items) {
 
-    // }
+    /**
+     * Adds all.
+     *
+     * @param      items  The items
+     */
+    public void addAll(int[] items) {
+        int res = 0;
+        int len = items.length + size;
+        for (int i = size; i < len; i++) {
+            arr[i] = items[res];
+            res += 1;
+        }
+        size = len;
+    }
 
     /**
      * { function_description }.
@@ -151,8 +163,8 @@ public class List {
      * @param      item   The item
      */
     public void add(final int index, final int item) {
-        for (int i = index + 1; i < size + 1; i++) {
-            arr[index] = arr[index - 1];
+        for (int i = size; i >= index; i--) {
+            arr[i + 1] = arr[i];
         }
         arr[index] = item;
         size += 1;
@@ -275,9 +287,6 @@ public class List {
             String[] tokens = line.split(" ");
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
-                case "add":
-                l.add(Integer.parseInt(tokens[1]));
-                break;
                 case "size":
                 // invoke size method and print the list size
                 // BTW, list size is not the array size
@@ -303,6 +312,26 @@ public class List {
                 break;
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                break;
+                case "addAll":
+                int res[] = new int[tokens.length - 1];
+                int res1 = 0, length = tokens.length;
+                for (int i = 1; i< length; i++) {
+                    res[res1] = Integer.parseInt(tokens[i]);
+                    res1 += 1;
+                }
+                l.addAll(res);
+                break;
+                case "count":
+                System.out.println(l.count(Integer.parseInt(tokens[1])));
+                break;
+                case "add":
+                    if (tokens.length <= 2) {
+                        l.add(Integer.parseInt(tokens[1]));
+                    }
+                    else {
+                        l.add(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
+                    }
                 break;
                 default:
                 break;
