@@ -54,6 +54,9 @@ public class List {
      * @author "madhuri".
     */
     private int[] arr;
+    /**
+     * { var_description }.
+     */
     private int size;
     // declare a private int size
     // again, don't initialize it here
@@ -62,7 +65,7 @@ public class List {
     /**
      * The purpose of the constructor is to initialize the class variables with
      * some default values.
-    */
+     */
     public List() {
 
         // what are the two variables to be initialized here?
@@ -259,8 +262,9 @@ public class List {
                 System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
                 break;
                 case "get":
-                if(l.get(Integer.parseInt(tokens[1])) != -1)
+                if (l.get(Integer.parseInt(tokens[1])) != -1) {
                     System.out.println(l.get(Integer.parseInt(tokens[1])));
+                }
                 break;
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
