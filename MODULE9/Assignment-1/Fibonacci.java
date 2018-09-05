@@ -27,6 +27,9 @@ public class Fibonacci {
      *
      * Look for the hint.txt if some of the testcases fail.
      */
+    private Fibonacci() {
+        //constructor not used
+    }
     /**
      * { function_description }.
      *
@@ -34,9 +37,6 @@ public class Fibonacci {
      *
      * @return     { description_of_the_return_value }
      */
-    private Fibonacci() {
-        //constructor not used
-    }
     public static List fib(final int n) {
         // todo - complete this method
         List list = new List(n);
