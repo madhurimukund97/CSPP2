@@ -28,7 +28,7 @@ class Fibonacci {
      * Look for the hint.txt if some of the testcases fail.
      */
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      n     { parameter_description }
      *
@@ -47,7 +47,7 @@ class Fibonacci {
         return list;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      args  The arguments
      */
