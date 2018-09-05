@@ -79,6 +79,8 @@ public class List {
         size = 0;
     }
 
+
+
     /*
      * Overloaded constructor with list capacity as argument
      * The default constructor sets the list capacity to 10
@@ -96,7 +98,9 @@ public class List {
 
     // todo - add an overloaded constructor here
 
-    
+    public List(int size1) {
+        list = new int[size1];
+    }
     /*
      * The add method does what the name suggests.
      * Add an int item to the list.
