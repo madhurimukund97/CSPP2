@@ -42,8 +42,7 @@ public final class Fibonacci {
         List list = new List(n);
         int num1 = 0, num2 = 1;
         // list.List(n);
-        
-        for (int i = 1; i<= n; i++) {
+        for (int i = 1; i <= n; i++) {
             list.add(num1);
             int temp = num1 + num2;
             num1 = num2;
