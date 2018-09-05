@@ -100,6 +100,7 @@ public class List {
 
     public List(int size1) {
         list = new int[size1];
+        size = 0;
     }
     /*
      * The add method does what the name suggests.

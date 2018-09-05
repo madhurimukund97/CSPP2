@@ -40,14 +40,17 @@ public final class Fibonacci {
     public static List fib(final int n) {
         // todo - complete this method
         List list = new List(n);
-        int a = 0, b = 1, c = 0;
-        list.add(a);
-        list.add(b);
-        for (int i = 2; i < n; i++) {
-            c = list.get(i - 1) + list.get(i - 2);
-            list.add(c);
+        int num1 = 0, num2 = 1;
+        // list.List(n);
+        
+        for (int i = 1; i<= n; i++) {
+            list.add(num1);
+            int temp = num1 + num2;
+            num1 = num2;
+            num2 = temp;
         }
         return list;
+
     }
     /**
      * { function_description }.
