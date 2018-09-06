@@ -140,7 +140,7 @@ public class StringList implements StringListInterface{
         
         
         for (int i = 0; i < items.length; i++) {
-            arr[i] = items[i];
+            arr[size] = items[i];
             size += 1;
         }
 		
