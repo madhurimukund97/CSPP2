@@ -230,7 +230,7 @@ public class StringList implements StringListInterface{
      *
      */
     public String toString() {
-        if (arr.length == 0) {
+        if (size == 0) {
             return "[]";
         }
         String str = "[";
