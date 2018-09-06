@@ -141,12 +141,13 @@ public class StringList implements StringListInterface{
         int res = 0;
         int len = items.length + size;
         for (int i = size; i < len; i++) {
+            if (size == arr.length) {
+                resize();
+            }
             arr[i] = items[res];
             res += 1;
             size += 1;
         }
-        size = len;
-
 		
 	}
     /*
