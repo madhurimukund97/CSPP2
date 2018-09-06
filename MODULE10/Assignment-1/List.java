@@ -299,15 +299,16 @@ public class List {
             System.out.println("Negative Index Exception");
         }
         else {
-        if (size == list.length) {
-            resize();
+            if (size == list.length) {
+                resize();
         }
-        }
+        
         for (int i = size; i >= index; i--) {
             list[i + 1] = list[i];
         }
         list[index] = item;
         size += 1;
+        }
     }
     
     /* Returns the count of occurances of a given item in the list*/
