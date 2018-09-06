@@ -338,13 +338,20 @@ public class List {
                 System.out.println(l.count(Integer.parseInt(tokens[1])));
                 break;
                 case "addAll":
-                if(tokens.length==2){
-                String[] t1 = tokens[1].split(",");
-                int temp[]=new int[t1.length];
-                for(int i=0;i<temp.length;i++)
-                    temp[i]=Integer.parseInt(t1[i]);
-                l.addAll(temp);
+                // if(tokens.length==2){
+                // String[] t1 = tokens[1].split(",");
+                // int temp[]=new int[t1.length];
+                // for(int i=0;i<temp.length;i++)
+                //     temp[i]=Integer.parseInt(t1[i]);
+                // l.addAll(temp);
+                // }
+                int[] res = new int[tokens.length - 1];
+                int res1 = 0, length = tokens.length;
+                for (int i = 1; i < length; i++) {
+                    res[res1] = Integer.parseInt(tokens[i]);
+                    res1 += 1;
                 }
+                l.addAll(res);
                 break;
                 case "size":
                 // invoke size method and print the list size
