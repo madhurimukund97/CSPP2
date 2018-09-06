@@ -137,16 +137,16 @@ public class StringList implements StringListInterface{
     array to the end of list*/
    
     public void addAll(String[] items) {
-        if (size == arr.length) {
-            resize();
-        }
+        
         int res = 0;
         int len = items.length + size;
         for (int i = size; i < len; i++) {
             arr[i] = items[res];
             res += 1;
+            size += 1;
         }
         size = len;
+
 		
 	}
     /*
