@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.util.*;
 
 public class List {
-	//Implement all the methods mentioned to build a ListADT
+    //Implement all the methods mentioned to build a ListADT
 
     /*
      * The goal for the list is to store items.
@@ -267,17 +267,17 @@ public class List {
      * or -1 if this list does not contain the element.
      */
     public int indexOf(final int item) {
-        for(int i = 0; i < size; i++) {
-            if(item == list[i])
+        for (int i = 0; i < size; i++) {
+            if (item == list[i]) {
                 return i;
+            }
         }
         return -1;
     }
 
-   /*Inserts all the elements of specified int 
+   /*Inserts all the elements of specified int
     array to the end of list*/
-    public void addAll(final int items[])
-    {
+    public void addAll(final int[] items) {
         // write the logic
         int res = 0;
         int len = items.length + size;
@@ -291,22 +291,19 @@ public class List {
             size += 1;
         }
     }
-
-     /* 
+    /*
         Inserts the specified element at the specified index 
-	by moving all the elements to the right.
+    by moving all the elements to the right.
         The method returns void (nothing)
      */
     public void add(final int index, final int item) {
         // write the logic
         if (index < 0) {
             System.out.println("Negative Index Exception");
-        }
-        else {
+        } else {
             if (size == list.length) {
                 resize();
         }
-        
         for (int i = size; i >= index; i--) {
             list[i + 1] = list[i];
         }
@@ -314,10 +311,8 @@ public class List {
         size += 1;
         }
     }
-    
     /* Returns the count of occurances of a given item in the list*/
-    public int count(final int item)
-    {
+    public int count(final int item) {
          // write the logic
         int count = 0;
         for (int i = 0; i < size; i++) {
@@ -330,7 +325,7 @@ public class List {
     }
 
 
-	public static void main(final String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -393,7 +388,9 @@ public class List {
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
+                default:
+                break;
             }
         }
-	}
+    }
 }
