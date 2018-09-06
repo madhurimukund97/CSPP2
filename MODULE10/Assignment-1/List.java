@@ -228,7 +228,7 @@ public class List {
         // Think about what to do to the size variable.
         
         if (index >= 0 && index < size) {
-            if(list[index]==0){
+            if (list[index] == 0) {
                 System.out.println("Invalid Position Exception");
             }
             for (int i = index; i < size - 1; i++) {
