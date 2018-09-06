@@ -281,9 +281,7 @@ public class List {
         int res = 0;
         int len = items.length + size;
         for (int i = size; i < len; i++) {
-            if (size == list.length) {
             resize();
-            }
             list[i] = items[res];
             res += 1;
         }
