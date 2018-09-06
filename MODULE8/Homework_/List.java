@@ -1,5 +1,6 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
+import java.util.*;
 
 public class List {
 	//Implement all the methods mentioned to build a ListADT
@@ -93,6 +94,10 @@ public class List {
      * constructor.
      * 
      */
+    private int[] resize() {
+        list = Arrays.copyOf(list, 2 * size);
+        return list;
+    }
     public List(int capacity) {
         size = 0;
         list = new int[capacity];
@@ -111,6 +116,9 @@ public class List {
      */
     public void add(int item) {
         //Inserts the specified element at the end of the zelist.
+        if (size == list.length) {
+            resize();
+        }
         list[size++] = item;   
     }
 
@@ -232,7 +240,7 @@ public class List {
      *
      */
     public String toString() {
-        if(size == 0)
+        if (size == 0)
             return "[]";
         String str = "[";
         int i = 0;
@@ -269,6 +277,9 @@ public class List {
     array to the end of list*/
     public void addAll(int items[])
     {
+        if (size == list.length) {
+            resize();
+        }
         int res = 0;
         int len = items.length + size;
         for (int i = size; i < len; i++) {
@@ -285,6 +296,9 @@ public class List {
      */
     public void add(int index,int item) {
          // write the logic
+        if(size == list.length) {
+            resize();
+        }
         if (index < 0) {
             System.out.println("Negative Index Exception");
         } 
