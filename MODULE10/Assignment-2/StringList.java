@@ -138,14 +138,9 @@ public class StringList implements StringListInterface{
    
     public void addAll(String[] items) {
         
-        int res = 0;
-        int len = items.length + size;
-        for (int i = size; i < len; i++) {
-            if (size == arr.length) {
-                resize();
-            }
-            arr[i] = items[res];
-            res += 1;
+        
+        for (int i = 0; i < items.length; i++) {
+            arr[i] = items[i];
             size += 1;
         }
 		
