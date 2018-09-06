@@ -71,7 +71,8 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new int[10];
+        final int var = 10;
+        list = new int[var];
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -141,7 +142,7 @@ public class List {
      * with the contents of the original array.
      *
      * TODO
-     * Create a method called resize(). Resize should create an new array that is
+     * Create a method called resize(). Resize should create
      * double the size of the old array.
      * Then copy the contents of the old array to the new one.
      * 
@@ -149,7 +150,7 @@ public class List {
      * Will the client invoke resize or is it internal to List class?
      * Should the resize be public method or private?
      * Should the resize method return any values?
-     * You know enough of Object Oriented Programming to answer these questions :-)
+     * You know enough of Object Oriented Programming
      *
      */
 
@@ -159,7 +160,7 @@ public class List {
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
      * to the objects outside the list
-     * 
+     *
      * The method returns an int. Empty list should return 0.
      */
     public int size() {
@@ -170,7 +171,7 @@ public class List {
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
      * It also does an additional step.
-     * Think about what happens when 
+     * Think about what happens when
      * an item is removed from the middle of the list
      * It creates a hole in the list, right?
      * This would mean, all the items that are
@@ -190,8 +191,8 @@ public class List {
     public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if(index >= 0 && index < size) {
-            for(int i = index; i < size - 1; i++) {
+        if (index >= 0 && index < size) {
+            for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
             size--;
@@ -208,11 +209,11 @@ public class List {
      * How can an element not be there at a given position?
      * Well, if the position is greater than the number of items
      * in the list then that would mean the item doesn't exist.
-     * How do we check if the position is greater than the 
+     * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
     public int get(final int index) {
-        if(index < 0 || index >= size) {
+        if (index < 0 || index >= size) {
             return -1;
         } else {
             return list[index];
@@ -228,7 +229,7 @@ public class List {
      * System.out.println(l);
      * This statement is a shortcut for
      * System.out.println(l.toString());
-     * 
+     *
      * So, implement the toString method to display the items
      * in the list in the square brackets notation.
      * i.e., if the list has numbers 1, 2, 3
@@ -240,17 +241,17 @@ public class List {
      *
      */
     public String toString() {
-        if(size == 0)
+        if (size == 0) {
             return "[]";
+        }
         String str = "[";
         int i = 0;
-        for(i = 0; i < size - 1; i++) {
+        for (i = 0; i < size - 1; i++) {
             str = str + list[i] + ",";
         }
         str = str + list[i] + "]";
         return str;
     }
-    
     /*
      * Contains return true if the list has
      * the item passed as an argument to the method
@@ -262,7 +263,7 @@ public class List {
     }
 
     /*
-     * Returns the index of the first occurrence 
+     * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
@@ -292,7 +293,7 @@ public class List {
         }
     }
     /*
-        Inserts the specified element at the specified index 
+        Inserts the specified element at the specified index
     by moving all the elements to the right.
         The method returns void (nothing)
      */
