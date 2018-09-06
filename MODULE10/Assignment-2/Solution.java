@@ -5,9 +5,17 @@ import java.util.Scanner;
  * Class for solution.
  */
 public final class Solution {
+    /**
+     * Constructs the object.
+     */
     private Solution() {
         //not used.
     }
+    /**
+     * { function_description }.
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         StringList sl = new StringList();
