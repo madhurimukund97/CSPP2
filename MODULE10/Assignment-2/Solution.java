@@ -1,10 +1,14 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 
+/**
+ * Class for solution.
+ */
 public class Solution {
-	
-
-	public static void main(String[] args) {
+    private Solution() {
+        //not used.
+    }
+    public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         StringList sl = new StringList();
         StringListInterface l = (StringListInterface)sl;//Typecasting is done for StringListInterface
@@ -19,7 +23,7 @@ public class Solution {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "add":
-	                l.add(tokens[1]);
+                    l.add(tokens[1]);
                 break;
                 case "addAll":
                 if (tokens.length == 2) {
@@ -52,7 +56,9 @@ public class Solution {
                 case "contains":
                 System.out.println(l.contains(tokens[1]));
                 break;
+                default:
+                break;
             }
         }
-	}
+    }
 }
