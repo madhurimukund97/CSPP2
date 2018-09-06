@@ -101,7 +101,6 @@ public class List {
     
     private int[] resize() {
         list = Arrays.copyOf(list, 2 * size);
-        System.out.println("resize");
         return list;
     }
     /*
