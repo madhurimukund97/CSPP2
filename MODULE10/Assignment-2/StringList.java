@@ -231,7 +231,7 @@ public class StringList implements StringListInterface{
      */
     public String toString() {
         if (arr.length == 0) {
-            return "";
+            return "[]";
         }
         String str = "[";
         for (int i = 0; i < size - 1; i++) {
