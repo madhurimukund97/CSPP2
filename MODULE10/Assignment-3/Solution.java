@@ -2,7 +2,9 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 //
 // A Class is implemented for Student details
-//
+/**
+ * "main".
+ */
 class Student {
     /**
      * { var_description }.
@@ -28,7 +30,7 @@ class Student {
         return this.name;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      other  The other
      *
