@@ -298,8 +298,10 @@ public class List {
         if (index < 0) {
             System.out.println("Negative Index Exception");
         }
-        if(size == list.length) {
+        else {
+        if (size == list.length) {
             resize();
+        }
         }
         for (int i = size; i >= index; i--) {
             list[i + 1] = list[i];
