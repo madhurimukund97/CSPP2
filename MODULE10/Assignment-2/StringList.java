@@ -190,7 +190,7 @@ public class StringList implements StringListInterface{
             }
             size--;
             arr[size] = null;
-        } else if (index < 0) {
+        } else if (index < 0 || index >= size) {
             System.out.println("Invalid Position Exception");
         } 
        
