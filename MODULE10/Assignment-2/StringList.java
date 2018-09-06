@@ -1,6 +1,6 @@
 //An interface for ListADT of strings
 import java.util.Arrays;
-interface StringListInterface
+interface StringListInter
 {
 	 public void add(String item);
 	 public void addAll(String items[]);
@@ -12,7 +12,7 @@ interface StringListInterface
 }
 //Write a StringList class which implements StringListInterface 
 
-public class StringList implements StringListInterface{
+public class StringList implements StringListInter{
 	//Implement all the methods mentioned to build a ListADT
 
     /*
