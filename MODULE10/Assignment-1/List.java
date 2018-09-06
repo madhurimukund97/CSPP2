@@ -101,6 +101,7 @@ public class List {
     
     private int[] resize() {
         list = Arrays.copyOf(list, 2 * size);
+        System.out.println("resize");
         return list;
     }
     /*
@@ -280,12 +281,18 @@ public class List {
     {
         // write the logic
         int res = 0;
+        System.out.println("hello");
         int len = items.length + size;
-        for (int i = size; i < len; i++) {
+        int i;
+        for (i = size; i < len; i++) {
+            if (size == list.length) {
+                resize();
+            }
+            System.out.println("1");
             list[i] = items[res];
             res += 1;
+            size += 1;
         }
-        size = len; 
     }
 
      /* 
