@@ -1,14 +1,29 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-//A Class is implemented for Student details
+//
+// A Class is implemented for Student details
+//
 class Student {
+    /**
+     * { var_description }
+     */
     private String name;
     
+    /**
+     * Constructs the object.
+     *
+     * @param      name  The name
+     */
     public Student(String name) {
     //A constructor used to initialize the instance variables
         this.name = name;
     }
 
+    /**
+     * Gets the name.
+     *
+     * @return     The name.
+     */
     public String getName() {
     //Getter method which returns the value of instance variable
         return this.name;
@@ -30,9 +45,21 @@ class Student {
     }
 }
 
+/**
+ * Class for solution.
+ */
 public class Solution {
-    
-
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+        //not used.
+    }
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
     public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
@@ -82,6 +109,8 @@ public class Solution {
                         break;
                         case "contains":
                         System.out.println(listString.contains(tokens[1]));
+                        break;
+                        default:
                         break;
                     }
                 }
@@ -137,6 +166,8 @@ public class Solution {
                         System.out.println(
                             listInteger.contains(Integer.parseInt((tokens[1]))));
                         break;
+                        default:
+                        break;
                     }
                 }
             break;
@@ -191,6 +222,8 @@ public class Solution {
                         System.out.println(
                             listFloat.contains(Float.parseFloat(tokens[1])));
                         break;
+                        default:
+                        break;
                     }
                 }
             break;
@@ -244,6 +277,8 @@ public class Solution {
                         case "contains":
                         System.out.println(
                             listCharacter.contains(tokens[1].charAt(0)));
+                        break;
+                        default:
                         break;
                     }
                 }
