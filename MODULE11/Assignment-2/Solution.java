@@ -56,7 +56,7 @@ class Student {
 /**
  * Class for solution.
  */
-public class Solution {
+class Solution {
     /**
      * { function_description }.
      *
@@ -66,10 +66,10 @@ public class Solution {
         //not used
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      stdin  The stdin
-     */
+    */
     public static void executeListInteger(final Scanner stdin) {
         List<Integer> l = new List();
         while (stdin.hasNext()) {
