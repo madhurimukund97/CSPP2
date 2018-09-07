@@ -133,7 +133,7 @@ public class List {
      */
     public int get(int index) {
         // Replace the code below to write the code for get
-        if (index < 0 || index >= size) {
+        if (index < 0 && index >= size) {
             return -1;
         } else {
             return list[index];
@@ -215,11 +215,14 @@ public class List {
                 remove(index);
                 index = indexOf(newArray[i]);
             }
-            // for (int j = 0; j < size; j++) {
-            //     if(newArray[i] == list[j]) {
-            //         remove(j);
+            // for (int i = 0; i < newArray.length; i++) {
+            //     for (int j = 0; j < size; j++) {
+            //         if(newArray[i] == list[j]) {
+            //             remove(j);
+            //             j--;
+            //         }
             //     }
-            // }
+            //  }
         }
     }
     /*
@@ -232,18 +235,24 @@ public class List {
     public List subList(int start, int end) {
     // write the logic for subList
         
-        if (start < 0 || end > size || start > end) {
+        if (start < 0 || end < 0 || start > end || start > size || end > size) {
             System.out.println("Index Out of Bounds Exception");
             return null;
         }
-        else {
-            List list1 = new List();
-            for (int i = start; i < end; i++) {
+        if (start == end && start > size) {
+            System.out.println("Index Out of Bounds Exception");
+            return null;
+        }
+        List list1 = new List();
+        for (int i = start; i < end; i++) {
             list1.add(list[i]);
         }
         return list1;
-        }
     }
+    
+
+
+    
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
