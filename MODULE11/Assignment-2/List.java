@@ -51,8 +51,9 @@ public class List<E> {
     /**
      * { function_description }
      */
-    private void resize() {
+    private E[] resize() {
         list = Arrays.copyOf(list, size * 2);
+        return list;
     }
 
     /*
@@ -160,7 +161,10 @@ public class List<E> {
      */
     public boolean contains(E item) {
 		//Write logic for contains method
-        return indexOf(item) != -1;
+        if (indexOf(item) != -1) {
+            return true;
+        }
+        return false;
 
     }
     /*
@@ -202,18 +206,18 @@ public class List<E> {
      */
     public List subList(int start, int end) {
 
-        if (start < 0 || end < 0 || start > end) {
+        if (start <= 0 || end < 0 || start > end
+            || start > size || end > size) {
             System.out.println("Index Out of Bounds Exception");
             return null;
         }
-        
         if (start == end && start > size) {
             System.out.println("Index Out of Bounds Exception");
             return null;
         }
         List<E> list1 = new List();
         for (int i = start; i < end; i++) {
-            list1.add(this.get(i));
+            list1.add(list[i]);
         }
         return list1;
     }
