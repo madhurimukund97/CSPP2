@@ -12,7 +12,7 @@ class Student {
     /**
      * Constructs the object.
      *
-     * @param      name  The name
+     * @param      name1  The name
      */
     public Student(final String name1) {
     //A constructor used to initialize the instance variables
@@ -61,7 +61,7 @@ class Student {
 /**
  * Class for solution.
  */
-class Solution {
+final class Solution {
     /**
      * Constructs the object.
      */
