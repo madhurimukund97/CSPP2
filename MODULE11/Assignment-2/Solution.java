@@ -1,19 +1,39 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 //A Class is implemented for Student details
+/**
+ * main.
+*/
 class Student {
+    /**
+     * { var_description }
+     */
     private String name;
-
-    public Student(String name) {
+    /**
+     * Constructs the object.
+     *
+     * @param      name  The name
+     */
+    public Student(final String name) {
     //A constructor used to initialize the instance variables
         this.name = name;
     }
-
+    /**
+     * Gets the name.
+     *
+     * @return     The name.
+     */
     public String getName() {
     //Getter method which returns the value of instance variable
         return this.name;
     }
-
+    /**
+     * { function_description }.
+     *
+     * @param      other  The other
+     *
+     * @return     { description_of_the_return_value }
+    */
     @Override
     public boolean equals(Object other) {
     //This method is to check if two students names are equal or not
@@ -24,12 +44,18 @@ class Student {
         Student that = (Student) other;
         return this.getName().equals(that.getName());
     }
-
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         return this.name;
     }
 }
-
+/**
+ * Class for solution.
+ */
 public class Solution {
 
     public static void executeListInteger(Scanner stdin) {
@@ -229,10 +255,10 @@ public class Solution {
         }
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      stdin  The stdin
-     */
+    */
     public static void executeListFloat(final Scanner stdin) {
         List<Float> l = new List();
         while (stdin.hasNext()) {
@@ -328,7 +354,7 @@ public class Solution {
         }
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      stdin  The stdin
      */
@@ -420,7 +446,7 @@ public class Solution {
      * { function_description }
      *
      * @param      stdin  The stdin
-     */
+    */
     public static void executeListStudent(final Scanner stdin) {
         List<Student> l = new List();
         while (stdin.hasNext()) {
@@ -481,7 +507,7 @@ public class Solution {
                             t1.length];
                         for (int i = 0; i < t1.length; i++) {
                             students[i] = new Student(
-                                t1[i]);   
+                                t1[i]); 
                         }
                         l.removeAll(students);
                     }
@@ -515,7 +541,11 @@ public class Solution {
             }
         }
     }
-
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
