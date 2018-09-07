@@ -251,7 +251,7 @@ public class List {
         return -1;
     }
     /*
-    Inserts all the elements of specified int array to the end of list    
+    Inserts all the elements of specified int array to the end of list  
     */
     /**
      * Adds all.
@@ -265,8 +265,8 @@ public class List {
         }
     }
     /*
-     Removes all of its elements that are contained in the specified int 
-     array.    
+     Removes all of its elements that are contained in the specified int
+     array.
     */
     /**
       * Removes all.
@@ -450,7 +450,7 @@ public class List {
                         l.removeAll(a);
                     }
                 break;
-                case "subList": 
+                case "subList":
                     if (tokens.length != 2) {
                         break;
                     }
