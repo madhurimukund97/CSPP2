@@ -210,11 +210,16 @@ public class List {
      public void removeAll(int[] newArray) {
         // write the logic
         for (int i = 0; i < newArray.length; i++) {
-            for (int j = 0; j < size; j++) {
-                if(newArray[i] == list[j]) {
-                    remove(j);
-                }
+            int index = indexOf(newArray[i]);
+            while (index != -1) {
+                remove(index);
+                index = indexOf(newArray[i]);
             }
+            // for (int j = 0; j < size; j++) {
+            //     if(newArray[i] == list[j]) {
+            //         remove(j);
+            //     }
+            // }
         }
     }
     /*
@@ -244,7 +249,7 @@ public class List {
     exactly matching with the given list or not.
     */
     public boolean equals(List list1) {
-    // Replace the code below
+    //Replace the code below
         int size1 = list1.size;
         int f = 0;
         if(size != size1) {
@@ -262,6 +267,14 @@ public class List {
         return false;
         }
     }
+
+    // return this.toString().equals(newlist.toString());
+
+        // if(Arrays.equals(newlist.list, list)) {
+        //     return true;
+        // }
+        // return false;
+    
     /*
     * Removes all the elements from list
     * Think about this case and make the method
