@@ -35,16 +35,24 @@ public class List<E> {
         //Inserts the specified element at the end of the list.
         //You can modify the code in this method.
         // list[(size++)] = item;
+        if (size == list.length) {
+            resize();
+        }
+        list[size++] = item;
     }
     /*Inserts all the elements of specified int
     array to the end of list*/
     public void addAll(E[] items) {
         //Write logic for addAll method
+        for(int i = 0; i < items.length; i++) {
+            add(items[i]);
+        }
     }
     /**
      * { function_description }
      */
-    private void resize(){
+    private void resize() {
+        list = Arrays.copyOf(list, size * 2);
     }
 
     /*
@@ -55,7 +63,7 @@ public class List<E> {
      * The method returns an int. Empty list should return 0.
      */
     public int size() {
-    	return 0;
+    	return size;
     }
     /*
      * The remove method does what the name suggests.
@@ -79,6 +87,15 @@ public class List<E> {
      */
     public void remove(int index) {
         //Write logic for remove method
+        if (index >= 0 && index < size) {
+            for (int i = index; i < size - 1; i++) {
+                list[i] = list[i+1];
+            }
+            list[size] = null;
+            size--;
+        } else {
+            System.out.println("Invalid Position Exception");
+        }
     }
     /*
      * Get method has to return the items that is
@@ -94,7 +111,13 @@ public class List<E> {
     public E get(int index) {
          //Write logic for get method
         // return list[index];
-        return null;
+        if (index >=0 && index < size) {
+            return list[index];
+        }
+        else {
+            System.out.println("Invalid position Exception");
+            return null;
+        }
     }
     /*
      * What happens when you print an object using println?
@@ -118,7 +141,16 @@ public class List<E> {
      */
     public String toString() {
 
-       return "print the list";
+       if (size == 0) {
+            return "[]";
+        }
+        String str = "[";
+        int i = 0;
+        for (i = 0; i < size - 1; i++) {
+            str = str + list[i] + ",";
+        }
+        str = str + list[i] + "]";
+        return str;
     }
     /*
      * Contains return true if the list has
@@ -128,7 +160,7 @@ public class List<E> {
      */
     public boolean contains(E item) {
 		//Write logic for contains method
-        return true;
+        return indexOf(item) != -1;
 
     }
     /*
@@ -139,6 +171,11 @@ public class List<E> {
 
     public int indexOf(E item) {
        //Write logic for indexOf method
+        for (int i = 0; i < size; i++) {
+            if (item.equals(list[i])) {
+                return i;
+            }
+        }
         return -1;
     }
 
@@ -148,6 +185,14 @@ public class List<E> {
     public void removeAll(E[] items)
     {
         // write the logic
+        for (int i = 0; i < items.length; i++) {
+            for (int j = 0; j < size; j++) {
+                if (items[i].equals(this.get(j))) {
+                    remove(j);
+                    j--;
+                }
+            }
+        }
     }
 
     /*Returns a list containing elements, including
@@ -155,20 +200,35 @@ public class List<E> {
      indicates the startIndex and the second parameter
      indicates the endIndex.
      */
-    public List subList(int n, int n2) {
+    public List subList(int start, int end) {
 
-        return null;
+        if (start < 0 || end < 0 || start > end) {
+            System.out.println("Index Out of Bounds Exception");
+            return null;
+        }
+        
+        if (start == end && start > size) {
+            System.out.println("Index Out of Bounds Exception");
+            return null;
+        }
+        List<E> list1 = new List();
+        for (int i = start; i < end; i++) {
+            list1.add(this.get(i));
+        }
+        return list1;
     }
     /*Returns a boolean indicating whether the parameter
       i.e a List object is exactly matching with the given list or not.
      */
     public boolean equals(List<E> listdata)
     {
-        return true;
+        return this.toString().equals(listdata.toString());
     }
     /*Removes all the elements from list*/
     public void clear()
     {
         // write the logic for clear.
+        list = ((E[])new Object[10]);
+        size = 0;
     }
 }
