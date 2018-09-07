@@ -6,8 +6,8 @@ import java.util.Scanner;
 */
 class Student {
     /**
-     * { var_description }
-     */
+     * { var_description }.
+    */
     private String name;
     /**
      * Constructs the object.
@@ -35,7 +35,7 @@ class Student {
      * @return     { description_of_the_return_value }
     */
     @Override
-    public boolean equals(Object other) {
+    public boolean equals(final Object other) {
     //This method is to check if two students names are equal or not
         if (!(other instanceof Student)) {
             return false;
@@ -57,8 +57,20 @@ class Student {
  * Class for solution.
  */
 public class Solution {
-
-    public static void executeListInteger(Scanner stdin) {
+    /**
+     * { function_description }.
+     *
+     * @param      stdin  The stdin
+     */
+    private Solution() {
+        //not used
+    }
+    /**
+     * { function_description }
+     *
+     * @param      stdin  The stdin
+     */
+    public static void executeListInteger(final Scanner stdin) {
         List<Integer> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -68,7 +80,7 @@ public class Solution {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "add":
-                    if (tokens.length == 2){
+                    if (tokens.length == 2) {
                         String[] t = tokens[1].split(",");
                         if (t.length == 1) {
                             l.add(Integer.parseInt(tokens[1]));
@@ -109,7 +121,7 @@ public class Solution {
                         String[] t1 = tokens[1].split(",");
                         Integer[] temp = new Integer[t1.length];
                         for (int i = 0; i < temp.length; i++) {
-                            temp[i]=Integer.parseInt(t1[i]);
+                            temp[i] = Integer.parseInt(t1[i]);
                         }
                         l.addAll(temp);
                     }
@@ -118,24 +130,23 @@ public class Solution {
                     if (tokens.length == 2) {
                         String[] t2 = tokens[1].split(",");
                         Integer[] a = new Integer[t2.length];
-                        for(int i = 0; i < t2.length; i++) {
+                        for (int i = 0; i < t2.length; i++) {
                             a[i] = Integer.parseInt(t2[i]);
                         }
                         l.removeAll(a);
                     }
                 break;
-                case "subList": {
+                case "subList":
                     if (tokens.length != 2) {
                         break;
                     }
                     String[] arrstring3 = tokens[1].split(",");
                     List object = l.subList(Integer.parseInt(
                         arrstring3[0]), Integer.parseInt(arrstring3[1]));
-                    if (object != null) { 
+                    if (object != null) {
                         System.out.println(object);
                     }
                     break;
-                }
                 case "equals":
                     if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
@@ -155,7 +166,7 @@ public class Solution {
         }
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      stdin  The stdin
      */
@@ -443,7 +454,7 @@ public class Solution {
         }
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      stdin  The stdin
     */
@@ -507,7 +518,7 @@ public class Solution {
                             t1.length];
                         for (int i = 0; i < t1.length; i++) {
                             students[i] = new Student(
-                                t1[i]); 
+                                t1[i]);
                         }
                         l.removeAll(students);
                     }
@@ -542,7 +553,7 @@ public class Solution {
         }
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      args  The arguments
      */
