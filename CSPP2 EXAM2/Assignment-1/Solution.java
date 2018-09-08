@@ -1,6 +1,7 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
+// import java.util.sort;
 
 /**
  * Class for set.
@@ -41,7 +42,7 @@ class Set {
      * @return     { description_of_the_return_value }
      */
     public boolean contains(final int item) {
-        for (int i = 0; i < size - 1; i++) {
+        for (int i = 0; i < size; i++) {
             if (set[i] == item) {
                 return true;
             }
@@ -60,7 +61,7 @@ class Set {
         int i;
         String str = "{";
         for (i = 0; i < size - 1; i++) {
-            str = str + set[i] + ",";
+            str = str + set[i] + ", ";
         }
         return str + set[i] + "}";
     }
@@ -74,9 +75,9 @@ class Set {
         if (!contains(item)) {
             set[size++] = item;
         }
-        else {
-           size = size - 1; 
-        }
+        // else {
+        //    size = size - 1; 
+        // }
     }
 
     /**
@@ -98,13 +99,20 @@ class Set {
      * @return     { description_of_the_return_value }
      */
     public Set intersection(final Set set1) {
-        // Set set3 = new Set();
-        // for (int i = 0; i < set1.length; i++) {
-        //     if (i == set[i]) {
-        //         set1.add(i);
+        Set set3 = new Set();
+        for (int i = 0; i < size - 1; i++) {
+            if (i == set[i]) {
+                set1.add(i);
+            }
+        }
+        return set1;
+        // for(int j = 0; j < set1.length; j++) {
+        //     if(set1[j] > set1[j+1]) {
+        //         set1[j+1] = set1[j];
         //     }
         // }
-        return null;
+        // set1 = sort(set1);
+        // return set1;
     }
     /**
      * { function_description }.
@@ -123,7 +131,9 @@ class Set {
         //     }
         // }
         // return retainSet;
+        Set set4 = new Set();
         return null;
+        
     }
 
     /**
