@@ -100,11 +100,17 @@ class Set {
      */
     public Set intersection(final Set set1) {
         Set set3 = new Set();
+        // if(set.length  || set3.length == 0){
+        //     return "{}";
+        // }
+        // 
         for (int i = 0; i < size - 1; i++) {
             if (i == set[i]) {
                 set1.add(i);
             }
         }
+        
+        
         return set1;
         // for(int j = 0; j < set1.length; j++) {
         //     if(set1[j] > set1[j+1]) {
@@ -131,7 +137,8 @@ class Set {
         //     }
         // }
         // return retainSet;
-        Set set4 = new Set();
+        // Set set4 = new Set();
+        // if(contains.items[i])
         return null;
         
     }
