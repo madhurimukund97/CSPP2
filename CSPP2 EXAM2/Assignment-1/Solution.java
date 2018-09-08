@@ -20,12 +20,13 @@ class Set {
     /**
      * Constructs the object.
      */
-    public Set(){
-        set = new int[10];
+    Set() {
+        final int n = 20;
+        set = new int[n];
         size = 0;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @return     { description_of_the_return_value }
      */
@@ -33,7 +34,7 @@ class Set {
         return size;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      item  The item
      *
@@ -52,7 +53,7 @@ class Set {
      *
      * @return     String representation of the object.
      */
-    public String toString(){
+    public String toString() {
         if (size == 0) {
             return "{}";
         }
@@ -65,35 +66,38 @@ class Set {
     }
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      item  The item
      */
-    public void add(int item) {
-        if(!contains(item)) {
+    public void add(final int item) {
+        if (contains(item)) {
+            size--;
+        }
+        else {
             set[size++] = item;
         }
     }
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      newSet  The new set
      */
-    public void add(int[] newSet) {
+    public void add(final int[] newSet) {
         for (int i : newSet) {
                 add(i);
         }
     }
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      set1  The set 1
      *
      * @return     { description_of_the_return_value }
      */
-    public Set intersection(Set set1) {
+    public Set intersection(final Set set1) {
         // Set set3 = new Set();
         // for (int i = 0; i < set1.length; i++) {
         //     if (i == set[i]) {
@@ -103,13 +107,13 @@ class Set {
         return null;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      items  The items
      *
      * @return     { description_of_the_return_value }
      */
-    public Set retainAll(int[] items) {
+    public Set retainAll(final int[] items) {
         // int res = 0;
         // int i;
         // int[] retainSet = new int[items.length];
@@ -119,18 +123,17 @@ class Set {
         //     }
         // }
         // return retainSet;
-        
         return null;
     }
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      set3  The set 3
      *
      * @return     { description_of_the_return_value }
      */
-    public int[][] cartesianProduct(Set set3) {
+    public int[][] cartesianProduct(final Set set3) {
         return null;
     }
 }
