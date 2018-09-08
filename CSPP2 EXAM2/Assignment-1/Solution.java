@@ -71,11 +71,11 @@ class Set {
      * @param      item  The item
      */
     public void add(final int item) {
-        if (contains(item)) {
-            size--;
+        if (!contains(item)) {
+            set[size++] = item;
         }
         else {
-            set[size++] = item;
+           size = size - 1; 
         }
     }
 
