@@ -4,24 +4,41 @@ import java.util.Arrays;
 
 /**
  * Class for set.
- * @author : 
+ * @author :
  */
 class Set {
     //your code goes here...
     //Good luck :-)
-    
-    private int set[];
+    /**
+    * set.
+    */
+    private int[] set;
+    /**
+     * size.
+     */
     private int size;
-
+    /**
+     * Constructs the object.
+     */
     public Set(){
         set = new int[10];
         size = 0;
     }
-
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int size() {
         return size;
     }
-
+    /**
+     * { function_description }
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean contains(final int item) {
         for (int i = 0; i < size - 1; i++) {
             if (set[i] == item) {
@@ -30,7 +47,11 @@ class Set {
         }
         return false;
     }
-
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString(){
         if (size == 0) {
             return "{}";
@@ -43,22 +64,35 @@ class Set {
         return str + set[i] + "}";
     }
 
+    /**
+     * { function_description }
+     *
+     * @param      item  The item
+     */
     public void add(int item) {
-        // for (int i = 0; i < size - 1; i++) {
-        // if (item != set[i]) {
         if(!contains(item)) {
             set[size++] = item;
         }
-        
-        // }
-        // }
     }
 
+    /**
+     * { function_description }
+     *
+     * @param      newSet  The new set
+     */
     public void add(int[] newSet) {
         for (int i : newSet) {
                 add(i);
         }
     }
+
+    /**
+     * { function_description }
+     *
+     * @param      set1  The set 1
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Set intersection(Set set1) {
         // Set set3 = new Set();
         // for (int i = 0; i < set1.length; i++) {
@@ -68,7 +102,13 @@ class Set {
         // }
         return null;
     }
-
+    /**
+     * { function_description }
+     *
+     * @param      items  The items
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Set retainAll(int[] items) {
         // int res = 0;
         // int i;
@@ -79,9 +119,17 @@ class Set {
         //     }
         // }
         // return retainSet;
+        
         return null;
     }
 
+    /**
+     * { function_description }
+     *
+     * @param      set3  The set 3
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int[][] cartesianProduct(Set set3) {
         return null;
     }
