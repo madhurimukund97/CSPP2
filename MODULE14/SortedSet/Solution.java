@@ -64,7 +64,7 @@ class SortedSet extends Set {
     public int[] headSet(final int toElement) {
         int[] temp = new int[size];
         int result1 = 0;
-        for (int i = 1; i < size-1; i++) {
+        for (int i = 0; i < size; i++) {
             if (set[i] < toElement) {
                 temp[i] = set[i];
                 result1++;
