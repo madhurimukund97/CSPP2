@@ -34,7 +34,9 @@ class Set {
     public int size() {
         return size;
     }
-
+    /**
+     * { function_description }.
+    */
     private void resize() {
         set = Arrays.copyOf(set, size * 2);
     }
@@ -88,9 +90,6 @@ class Set {
                 }
             }
         }
-        // else {
-        //    size = size - 1;
-        // }
     }
     /**
      * Adds all.
@@ -129,20 +128,20 @@ class Set {
     public int last() {
         return 1;
     }
-    /**
-     * { function_description }.
-     *
-     * @param      index  The index
-     *
-     * @return     { description_of_the_return_value }
-     */
-    public int get(final int index) {
-        if (index < 0 || index >= this.size()) {
-            return -1;
-        } else {
-            return set[index];
-        }
-    }
+    // /**
+    //  * { function_description }.
+    //  *
+    //  * @param      index  The index
+    //  *
+    //  * @return     { description_of_the_return_value }
+    //  */
+    // public int get(final int index) {
+    //     if (index < 0 || index >= this.size()) {
+    //         return -1;
+    //     } else {
+    //         return set[index];
+    //     }
+    // }
     /**
      * { function_description }.
      *
@@ -152,63 +151,7 @@ class Set {
         for (int i : newSet) {
                 add(i);
         }
-    }
-
-    /**
-     * { function_description }.
-     *
-     * @param      set1  The set 1
-     *
-     * @return     { description_of_the_return_value }
-     */
-    public Set intersection(final Set set1) {
-        Set set3 = new Set();
-        for (int i = 0; i < this.size; i++) {
-            if (set1.contains(this.get(i))) {
-                set3.add(this.get(i));
-            }
-        }
-        return set3;
-    }
-    /**
-     * { function_description }.
-     *
-     * @param      items  The items
-     *
-     * @return     { description_of_the_return_value }
-     */
-    public Set retainAll(final int[] items) {
-        Set set3 = new Set();
-        // if(set.length  || set3.length == 0){
-        //     return "{}";
-        // }
-        //
-        for (int i : items) {
-            set3.add(i);
-        }
-        return intersection(set3);
-    }
-    /**
-     * { function_description }.
-     *
-     * @param      set3  The set 3
-     *
-     * @return     { description_of_the_return_value }
-     */
-    public int[][] cartesianProduct(final Set set3) {
-        int[][] result = new int[this.size() * set3.size()][2];
-        int k = -1;
-        if (this.size() == 0 || set3.size() == 0) {
-            return null;
-        }
-        for (int i = 0; i < this.size(); i++) {
-            for (int j = 0; j < set3.size(); j++) {
-                result[++k][0] = this.get(i);
-                result[k][1] = set3.get(j);
-            }
-        }
-        return result;
-    }
+    }   
 }
 
 /**
@@ -274,31 +217,6 @@ public final class Solution {
                 } else {
                     s.add(intArray);
                 }
-                break;
-                case "intersection":
-                s = new Set();
-                Set t = new Set();
-                intArray = intArray(tokens[1]);
-                s.add(intArray);
-                intArray = intArray(tokens[2]);
-                t.add(intArray);
-                System.out.println(s.intersection(t));
-                break;
-                case "retainAll":
-                s = new Set();
-                intArray = intArray(tokens[1]);
-                s.add(intArray);
-                intArray = intArray(tokens[2]);
-                System.out.println(s.retainAll(intArray));
-                break;
-                case "cartesianProduct":
-                s = new Set();
-                t = new Set();
-                intArray = intArray(tokens[1]);
-                s.add(intArray);
-                intArray = intArray(tokens[2]);
-                t.add(intArray);
-                System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
                 break;
                 default:
                 break;
