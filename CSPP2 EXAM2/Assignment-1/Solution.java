@@ -76,7 +76,7 @@ class Set {
             set[size++] = item;
         }
         // else {
-        //    size = size - 1; 
+        //    size = size - 1;
         // }
     }
     /**
@@ -113,28 +113,12 @@ class Set {
      */
     public Set intersection(final Set set1) {
         Set set3 = new Set();
-        // if(set.length  || set3.length == 0){
-        //     return "{}";
-        // }
-        // 
-        // for (int i = 0; i < size - 1; i++) {
-        //     if (set1.i == set[i]) {
-        //         set3.add(i);
-        //     }
-        // }
         for (int i = 0; i < this.size; i++) {
             if (set1.contains(this.get(i))) {
                 set3.add(this.get(i));
             }
         }
         return set3;
-        // for(int j = 0; j < set1.length; j++) {
-        //     if(set1[j] > set1[j+1]) {
-        //         set1[j+1] = set1[j];
-        //     }
-        // }
-        // set1 = sort(set1);
-        // return set1;
     }
     /**
      * { function_description }.
@@ -144,30 +128,16 @@ class Set {
      * @return     { description_of_the_return_value }
      */
     public Set retainAll(final int[] items) {
-        // int res = 0;
-        // int i;
-        // int[] retainSet = new int[items.length];
-        // for (i = 0; i < size - 1; i++) {
-        //     if(set[i] == items[res]) {
-        //         retainSet[i] = items[res];
-        //     }
-        // }
-        // return retainSet;
-        // Set set4 = new Set();
-        // if(contains.items[i])
         Set set3 = new Set();
         // if(set.length  || set3.length == 0){
         //     return "{}";
         // }
-        // 
+        //
         for (int i : items) {
             set3.add(i);
         }
-        return intersection(set3);
-        
-        
+        return intersection(set3);  
     }
-
     /**
      * { function_description }.
      *
