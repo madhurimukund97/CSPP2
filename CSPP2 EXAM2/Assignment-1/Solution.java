@@ -79,7 +79,13 @@ class Set {
         //    size = size - 1; 
         // }
     }
-
+    public int get(final int index) {
+        if (index < 0 || index >= this.size()) {
+            return -1;
+        } else {
+            return set[index];
+        }
+    }
     /**
      * { function_description }.
      *
@@ -104,14 +110,17 @@ class Set {
         //     return "{}";
         // }
         // 
-        for (int i = 0; i < size - 1; i++) {
-            if (i == set[i]) {
-                set1.add(i);
+        // for (int i = 0; i < size - 1; i++) {
+        //     if (set1.i == set[i]) {
+        //         set3.add(i);
+        //     }
+        // }
+        for (int i = 0; i < this.size; i++) {
+            if (set1.contains(this.get(i))) {
+                set3.add(this.get(i));
             }
         }
-        
-        
-        return set1;
+        return set3;
         // for(int j = 0; j < set1.length; j++) {
         //     if(set1[j] > set1[j+1]) {
         //         set1[j+1] = set1[j];
@@ -139,7 +148,16 @@ class Set {
         // return retainSet;
         // Set set4 = new Set();
         // if(contains.items[i])
-        return null;
+        Set set3 = new Set();
+        // if(set.length  || set3.length == 0){
+        //     return "{}";
+        // }
+        // 
+        for (int i : items) {
+            set3.add(i);
+        }
+        return intersection(set3);
+        
         
     }
 
