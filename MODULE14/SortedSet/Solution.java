@@ -77,9 +77,9 @@ class Set {
      */
     public void add(final int item) {
         if (!contains(item)) {
-            for(int i = 0; i<size;i++){
-                if(set[i]>item){
-                    for(int j = size;j>i;j--){
+            for (int i = 0; i < size; i++) {
+                if (set[i] > item) {
+                    for (int j = size; j > i; j--) {
                         set[j+1] = set[j];
                     }
                     set[i+1] = set[i];
@@ -97,13 +97,13 @@ class Set {
      *
      * @param      items  The items.
      */
-    public void addAll(int[] items) {
+    public void addAll(final int[] items) {
         
     }
     /**
      * { item_description }.
      */
-    public int[] headSet(int toElement) {
+    public int[] headSet(final int toElement) {
         return null;
     }
 
@@ -115,7 +115,7 @@ class Set {
      *
      * @return     { description_of_the_return_value }
      */
-    public int[] subSet(int fromElement, int toElement) {
+    public int[] subSet(final int fromElement, final int toElement) {
         return null;
     }
     /**
