@@ -80,10 +80,10 @@ class Set {
             for (int i = 0; i < size; i++) {
                 if (set[i] > item) {
                     for (int j = size; j > i; j--) {
-                        set[j+1] = set[j];
+                        set[j + 1] = set[j];
                     }
-                    set[i+1] = set[i];
-                    set[i]=item;
+                    set[i + 1] = set[i];
+                    set[i] = item;
 
                 }
             }
@@ -101,7 +101,11 @@ class Set {
         
     }
     /**
-     * { item_description }.
+     * { function_description }
+     *
+     * @param      toElement  To element
+     *
+     * @return     { description_of_the_return_value }
      */
     public int[] headSet(final int toElement) {
         return null;
@@ -122,7 +126,7 @@ class Set {
      * { function_description }.
      *
      * @return     { description_of_the_return_value }
-     */
+    */
     public int last(){
         return 1;
     }
