@@ -79,6 +79,13 @@ class Set {
         //    size = size - 1; 
         // }
     }
+    /**
+     * { function_description }.
+     *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int get(final int index) {
         if (index < 0 || index >= this.size()) {
             return -1;
@@ -169,7 +176,7 @@ class Set {
      * @return     { description_of_the_return_value }
      */
     public int[][] cartesianProduct(final Set set3) {
-        int [][] result = new int[this.size() * set3.size()][2];
+        int[][] result = new int[this.size() * set3.size()][2];
         int k = -1;
         if (this.size() == 0 || set3.size() == 0) {
             return null;
