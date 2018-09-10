@@ -98,10 +98,10 @@ class Set {
      * @param      items  The items.
      */
     public void addAll(final int[] items) {
-        
+     
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      toElement  To element
      *
@@ -127,7 +127,7 @@ class Set {
      *
      * @return     { description_of_the_return_value }
     */
-    public int last(){
+    public int last() {
         return 1;
     }
     /**
