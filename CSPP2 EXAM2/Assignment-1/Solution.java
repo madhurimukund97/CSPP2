@@ -136,7 +136,7 @@ class Set {
         for (int i : items) {
             set3.add(i);
         }
-        return intersection(set3);  
+        return intersection(set3);
     }
     /**
      * { function_description }.
