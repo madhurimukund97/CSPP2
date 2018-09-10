@@ -169,7 +169,18 @@ class Set {
      * @return     { description_of_the_return_value }
      */
     public int[][] cartesianProduct(final Set set3) {
-        return null;
+        int [][] result = new int[this.size() * set3.size()][2];
+        int k = -1;
+        if (this.size() == 0 || set3.size() == 0) {
+            return null;
+        }
+        for (int i = 0; i < this.size(); i++) {
+            for (int j = 0; j < set3.size(); j++) {
+                result[++k][0] = this.get(i);
+                result[k][1] = set3.get(j);
+            }
+        }
+        return result;
     }
 }
 
