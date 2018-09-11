@@ -139,11 +139,13 @@ class List {
      *
      */
     /**
-     * { function_description }.
+     * { function_description }
      *
-     * @param      index  The index
+     * @param      index      The index
+     *
+     * @throws     Exception  { exception_description }
      */
-    public void remove(final int index) throws Exception{
+    public void remove(final int index) throws Exception {
         // write the logic for remove here. Think about what to do to the size
         // variable.
         if (index < 0) {
@@ -293,11 +295,13 @@ class List {
      array.
     */
     /**
-      * Removes all.
-      *
-      * @param      newArray  The new array
-    */
-     public void removeAll(final int[] newArray) throws Exception{
+     * Removes all.
+     *
+     * @param      newArray   The new array
+     *
+     * @throws     Exception  { exception_description }
+     */
+     public void removeAll(final int[] newArray) throws Exception {
         // write the logic
         if(newArray.length < list.length) {
             for (int i = 0; i < newArray.length; i++) {
@@ -307,7 +311,6 @@ class List {
                     index = indexOf(newArray[i]);
                 }
             }
-        
             // for (int i = 0; i < newArray.length; i++) {
             //     for (int j = 0; j < size; j++) {
             //         if(newArray[i] == list[j]) {
@@ -316,8 +319,7 @@ class List {
             //         }
             //     }
             //  }
-        }
-        else {
+        } else {
             throw new Exception("Invalid Position Exception");
         }
     }
@@ -329,14 +331,16 @@ class List {
     and also if start is greater than end.
     */
     /**
-     * { function_description }.
+     * { function_description }
      *
-     * @param      start  The start
-     * @param      end    The end
+     * @param      start      The start
+     * @param      end        The end
      *
      * @return     { description_of_the_return_value }
+     *
+     * @throws     Exception  { exception_description }
      */
-    public List subList(final int start, final int end) throws Exception{
+    public List subList(final int start, final int end) throws Exception {
     // write the logic for subList
         if (start <= 0 || end < 0 || start > end
             || start > size || end > size) {
@@ -410,7 +414,10 @@ class List {
      * @param      args  The arguments
      */
 }
-class Solution {
+/**
+ * Class for solution.
+ */
+public class Solution {
 
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
@@ -441,12 +448,10 @@ class Solution {
                     System.out.println(l);
                 break;
                 case "remove":
-                try{
+                try {
                     l.remove(Integer.parseInt(tokens[1]));
-                }
-                catch(Exception e) {
+                } catch (Exception e) {
                     System.out.println(e.getMessage());
-
                 }
                 break;
                 case "indexOf":
@@ -478,7 +483,7 @@ class Solution {
                     }
                 break;
                 case "removeAll":
-                try{
+                try {
                     if (tokens.length == 2) {
                         String[] t2 = tokens[1].split(",");
                         int[] a = new int[t2.length];
@@ -487,12 +492,12 @@ class Solution {
                         }
                         l.removeAll(a);
                     }
-                } catch(Exception e) {
+                } catch (Exception e) {
                     System.out.println(e.getMessage());
                 }
                 break;
                 case "subList":
-                try{
+                try {
                     if (tokens.length != 2) {
                         break;
                     }
@@ -502,7 +507,7 @@ class Solution {
                     if (object != null) {
                         System.out.println(object);
                     }
-                } catch(Exception e) {
+                } catch (Exception e) {
                     System.out.println(e.getMessage());
                 }
                 break;
