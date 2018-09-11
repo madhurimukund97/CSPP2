@@ -414,7 +414,7 @@ class List {
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * { function_description }.
      *
