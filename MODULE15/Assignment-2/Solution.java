@@ -111,7 +111,7 @@ class SortedSet extends Set {
                     result1++;
                 }
             }
-            if (result1 <= 0) {
+            if (result1 != 0) {
                 // throw new SetEmptyException("");
                 return Arrays.copyOf(temp, result1);
             } else {
