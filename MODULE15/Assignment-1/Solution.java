@@ -74,7 +74,7 @@ class List {
     /**
      * Constructs the object.
      */
-    public List() {
+    List() {
 
         // what are the two variables to be initialized here? think about the
         // private variables described above. What should be the default values?
@@ -139,7 +139,7 @@ class List {
      *
      */
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      index      The index
      *
@@ -150,16 +150,13 @@ class List {
         // variable.
         if (index < 0) {
             throw new Exception("Invalid Position Exception");
-        }
-        else {
+        } else {
             for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
             size--;
-        }
-        
+        }  
     }
-
     /*
      * Get method has to return the items that is at the index position passed
      * as an argument to the method. If the item doesn't exist then return a -1
@@ -303,7 +300,7 @@ class List {
      */
      public void removeAll(final int[] newArray) throws Exception {
         // write the logic
-        if(newArray.length < list.length) {
+        if (newArray.length < list.length) {
             for (int i = 0; i < newArray.length; i++) {
                 int index = indexOf(newArray[i]);
                 while (index != -1) {
@@ -331,7 +328,7 @@ class List {
     and also if start is greater than end.
     */
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      start      The start
      * @param      end        The end
