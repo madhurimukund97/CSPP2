@@ -308,14 +308,7 @@ class List {
                     index = indexOf(newArray[i]);
                 }
             }
-            // for (int i = 0; i < newArray.length; i++) {
-            //     for (int j = 0; j < size; j++) {
-            //         if(newArray[i] == list[j]) {
-            //             remove(j);
-            //             j--;
-            //         }
-            //     }
-            //  }
+            
         } else {
             throw new Exception("Invalid Position Exception");
         }
