@@ -155,7 +155,7 @@ class List {
                 list[i] = list[i + 1];
             }
             size--;
-        }  
+        }
     }
     /*
      * Get method has to return the items that is at the index position passed
@@ -414,8 +414,12 @@ class List {
 /**
  * Class for solution.
  */
-public class Solution {
-
+class Solution {
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
