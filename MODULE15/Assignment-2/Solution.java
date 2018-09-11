@@ -86,7 +86,7 @@ class SortedSet extends Set {
             }
             return Arrays.copyOf(result, temp);
         } catch (InvalidSubsetSelectionException is) {
-            System.out.println("InvalidSubsetSelectionException​");
+            System.out.println("Invalid Arguments to Subset Exception");
         
         }
         return null;
