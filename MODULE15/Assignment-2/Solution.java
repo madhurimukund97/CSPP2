@@ -2,6 +2,31 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
 /**
+ * Exception for signaling invalid subset selection errors.
+ */
+class InvalidSubsetSelectionException extends Exception {
+    /**
+     * Constructs the object.
+     *
+     * @param      s     { parameter_description }
+     **/
+    InvalidSubsetSelectionException(final String s) {
+        super(s);
+    }
+}
+
+class SetEmptyException extends Exception {
+    /**
+     * Constructs the object.
+     *
+     * @param      s     { parameter_description }
+     **/
+    SetEmptyException(final String s) {
+        super(s);
+    }
+}
+
+/**
  * Class for sorted set.
  */
 class SortedSet extends Set {
@@ -41,26 +66,32 @@ class SortedSet extends Set {
      *
      * @throws     Exception    { exception_description }
      */
-    public int[] subSet(final int fromElement, final int toElement)
-        throws Exception {
-        if (fromElement > toElement) {
-            throw new Exception("Invalid Arguments to Subset Exception");
+    public int[] subSet(final int fromElement, final int toElement) {
+        try {
+            if (fromElement > toElement) {
+                throw new InvalidSubsetSelectionException("");
             // return null;
-        }
-        int[] result = new int[size];
-        int temp = 0;
-        for (int i = 0; i < size; i++) {
-            if (set[i] >= fromElement) {
-                for (int j = i; j < size; j++) {
-                    if (set[j] < toElement) {
-                        result[temp++] = set[i];
+            }
+            int[] result = new int[size];
+            int temp = 0;
+            for (int i = 0; i < size; i++) {
+                if (set[i] >= fromElement) {
+                    for (int j = i; j < size; j++) {
+                        if (set[j] < toElement) {
+                            result[temp++] = set[i];
+                        }
+                        break;
                     }
-                    break;
                 }
             }
+            return Arrays.copyOf(result, temp);
+        } catch (InvalidSubsetSelectionException is) {
+            System.out.println("InvalidSubsetSelectionException​");
+        
         }
-        return Arrays.copyOf(result, temp);
+        return null;
     }
+
     /**
      * { function_description }.
      *
@@ -70,19 +101,28 @@ class SortedSet extends Set {
      *
      * @throws     Exception  { exception_description }
      */
-    public int[] headSet(final int toElement) throws Exception {
-        int[] temp = new int[size];
-        int result1 = 0;
-        for (int i = 0; i < size; i++) {
-            if (set[i] < toElement) {
-                temp[i] = set[i];
-                result1++;
+    public int[] headSet(final int toElement) {
+        try {
+           int[] temp = new int[size];
+            int result1 = 0;
+            for (int i = 0; i < size; i++) {
+                if (set[i] < toElement) {
+                    temp[i] = set[i];
+                    result1++;
+                }
             }
+            if (result1 <= 0) {
+                // throw new SetEmptyException("");
+                return Arrays.copyOf(temp, result1);
+            } else {
+                throw new SetEmptyException("");
+            }
+        
+        } catch (SetEmptyException se) {
+            System.out.println("SetEmptyException");
         }
-        if (result1 <= 0) {
-            throw new Exception("Set Empty Exception");
-        }
-        return Arrays.copyOf(temp, result1);
+        return null;
+        
     }
     /**
      * { function_description }.
@@ -91,12 +131,13 @@ class SortedSet extends Set {
      *
      * @throws     Exception  { exception_description }
      */
-    public int last() throws Exception {
+    public int last() throws SetEmptyException{
         if (size == 0) {
-            throw new Exception("Set Empty Exception");
+            throw new SetEmptyException("Set Empty Exception");
             // return -1;
-        }
-        return set[size - 1];
+        } else {
+            return set[size - 1];
+        }   
     }
     /**
      * Adds all.
@@ -198,33 +239,25 @@ public final class Solution {
                 System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
                 break;
             case "subSet":
-            try {
-                if (tokens.length != 2) {
-                    break;
-                }
-                String[] arrstring3 = tokens[1].split(",");
-                int[] object = s.subSet(Integer.parseInt(arrstring3[0]),
-                                        Integer.parseInt(arrstring3[1]));
-                if (object != null) {
-                    System.out.println(Arrays.toString(object).replace("[",
-                        "{").replace("]", "}"));
-                }
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
+            if (tokens.length != 2) {
+                break;
+            }
+            String[] arrstring3 = tokens[1].split(",");
+            int[] object = s.subSet(Integer.parseInt(arrstring3[0]),
+                    Integer.parseInt(arrstring3[1]));
+            if (object != null) {
+                System.out.println(Arrays.toString(object).replace("[",
+                    "{").replace("]", "}"));
             }
             break;
             case "headSet":
-            try {
-                if (tokens.length != 2) {
-                    break;
-                }
-                int[] obj = s.headSet(Integer.parseInt(tokens[1]));
-                if (obj != null) {
-                    System.out.println(Arrays.toString(obj).replace("[",
-                        "{").replace("]", "}"));
-                }
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
+            if (tokens.length != 2) {
+                break;
+            }
+            int[] obj = s.headSet(Integer.parseInt(tokens[1]));
+            if (obj != null) {
+                System.out.println(Arrays.toString(obj).replace("[",
+                    "{").replace("]", "}"));
             }
             break;
             case "last":
