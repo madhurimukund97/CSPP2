@@ -175,7 +175,6 @@ class List {
         // write the logic for remove here. Think about what to do to the size
         // variable.
         try {
-            
             if (index >= 0 && index < size) {
                 for (int i = index; i < size - 1; i++) {
                     list[i] = list[i + 1];
@@ -186,7 +185,7 @@ class List {
             }
         } catch (InvalidPositionException ip) {
             System.out.println("Invalid Position Exception");
-        } 
+        }
     }
     /*
      * Get method has to return the items that is at the index position passed
@@ -372,7 +371,7 @@ class List {
                     list1.add(list[i]);
                 }
                 return list1;
-            }   
+            }
         } catch (IndexOutofBoundsException ib) {
             System.out.println("Index Out of Bounds Exception");
         }
