@@ -415,11 +415,19 @@ class List {
  * Class for solution.
  */
 public final class Solution {
+
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+        //constructor not using
+    }
     /**
      * { function_description }.
      *
      * @param      args  The arguments
      */
+
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
