@@ -32,10 +32,14 @@ class SortedSet extends Set {
         sort(set);
     }
     /**
-     * subSet method.
+     * { function_description }.
+     *
      * @param      fromElement  The from element
      * @param      toElement    To element
+     *
      * @return     { description_of_the_return_value }
+     *
+     * @throws     Exception    { exception_description }
      */
     public int[] subSet(final int fromElement, final int toElement) throws Exception {
         if (fromElement > toElement) {
@@ -57,9 +61,13 @@ class SortedSet extends Set {
         return Arrays.copyOf(result, temp);
     }
     /**
-     * headSet method.
+     * { function_description }.
+     *
      * @param      toElement  To element
+     *
      * @return     { description_of_the_return_value }
+     *
+     * @throws     Exception  { exception_description }
      */
     public int[] headSet(final int toElement) throws Exception {
         int[] temp = new int[size];
@@ -76,8 +84,11 @@ class SortedSet extends Set {
         return Arrays.copyOf(temp, result1);
     }
     /**
-     * last method.
+     * { function_description }.
+     *
      * @return     { description_of_the_return_value }
+     *
+     * @throws     Exception  { exception_description }
      */
     public int last() throws Exception {
         if (size == 0) {
@@ -186,7 +197,7 @@ public final class Solution {
                 System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
                 break;
             case "subSet":
-            try{
+            try {
                 if (tokens.length != 2) {
                     break;
                 }
