@@ -1,5 +1,31 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
+/**
+ * Exception for signaling invalid position errors.
+ */
+class InvalidPositionException extends Exception {
+    /**
+     * Constructs the object.
+     *
+     * @param      s     { parameter_description }
+     **/
+    InvalidPositionException(final String s) {
+        super(s);
+    }
+}
+/**
+ * Exception for signaling index outof bounds errors.
+ */
+class IndexOutofBoundsException extends Exception {
+    /**
+     * Constructs the object.
+     *
+     * @param      s     { parameter_description }
+     */
+    IndexOutofBoundsException(final String s) {
+        super(s);
+    }
+}
 
 /**
  * List of .
@@ -145,17 +171,21 @@ class List {
      *
      * @throws     Exception  { exception_description }
      */
-    public void remove(final int index) throws Exception {
+    public void remove(final int index) {
         // write the logic for remove here. Think about what to do to the size
         // variable.
-        if (index < 0) {
-            throw new Exception("Invalid Position Exception");
-        } else {
-            for (int i = index; i < size - 1; i++) {
-                list[i] = list[i + 1];
+        try {
+            if (index < 0) {
+                throw new InvalidPositionException("");
+            } else {
+                for (int i = index; i < size - 1; i++) {
+                    list[i] = list[i + 1];
+                }
+                size--;
             }
-            size--;
-        }
+        } catch (InvalidPositionException ip) {
+            System.out.println("InvalidPositionException");
+        }    
     }
     /*
      * Get method has to return the items that is at the index position passed
@@ -298,7 +328,7 @@ class List {
      *
      * @throws     Exception  { exception_description }
      */
-     public void removeAll(final int[] newArray) throws Exception {
+     public void removeAll(final int[] newArray) {
         // write the logic
         if (newArray.length < list.length) {
             for (int i = 0; i < newArray.length; i++) {
@@ -308,9 +338,6 @@ class List {
                     index = indexOf(newArray[i]);
                 }
             }
-            
-        } else {
-            throw new Exception("Invalid Position Exception");
         }
     }
     /*
@@ -332,20 +359,25 @@ class List {
      */
     public List subList(final int start, final int end) throws Exception {
     // write the logic for subList
-        if (start <= 0 || end < 0 || start > end
-            || start > size || end > size) {
-            throw new Exception("Index Out of Bounds Exception");
-            // return null;
+        try {
+            if (start <= 0 || end < 0 || start > end
+                || start > size || end > size) {
+                throw new Exception("Index Out of Bounds Exception");
+                // return null;
+            }
+            if (start == end && start > size) {
+                throw new Exception("Index Out of Bounds Exception");
+                // return null;
+            }
+            List list1 = new List();
+            for (int i = start; i < end; i++) {
+                list1.add(list[i]);
+            }
+            return list1;
+        } catch (IndexOutofBoundsException ib) {
+            System.out.println("IndexOutofBoundsException");
         }
-        if (start == end && start > size) {
-            throw new Exception("Index Out of Bounds Exception");
-            // return null;
-        }
-        List list1 = new List();
-        for (int i = start; i < end; i++) {
-            list1.add(list[i]);
-        }
-        return list1;
+        return null;
     }
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
