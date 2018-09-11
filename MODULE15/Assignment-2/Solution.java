@@ -14,7 +14,9 @@ class InvalidSubsetSelectionException extends Exception {
         super(s);
     }
 }
-
+/**
+ * Exception for signaling set empty errors.
+ */
 class SetEmptyException extends Exception {
     /**
      * Constructs the object.
@@ -87,7 +89,6 @@ class SortedSet extends Set {
             return Arrays.copyOf(result, temp);
         } catch (InvalidSubsetSelectionException is) {
             System.out.println("Invalid Arguments to Subset Exception");
-        
         }
         return null;
     }
