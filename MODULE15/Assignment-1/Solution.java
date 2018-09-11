@@ -16,16 +16,16 @@ class InvalidPositionException extends Exception {
 /**
  * Exception for signaling index outof bounds errors.
  */
-class IndexOutofBoundsException extends Exception {
-    /**
-     * Constructs the object.
-     *
-     * @param      s     { parameter_description }
-     */
-    IndexOutofBoundsException(final String s) {
-        super(s);
-    }
-}
+// class IndexOutofBoundsException extends Exception {
+//     /**
+//      * Constructs the object.
+//      *
+//      * @param      s     { parameter_description }
+//      */
+//     IndexOutofBoundsException(final String s) {
+//         super(s);
+//     }
+// }
 
 /**
  * List of .
