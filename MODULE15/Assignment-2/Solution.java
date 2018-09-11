@@ -121,10 +121,10 @@ class SortedSet extends Set {
         } catch (SetEmptyException se) {
             System.out.println("Set Empty Exception");
         }
-        return null;    
+        return null; 
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @return     { description_of_the_return_value }
      *
