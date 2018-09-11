@@ -119,7 +119,7 @@ class SortedSet extends Set {
             }
         
         } catch (SetEmptyException se) {
-            System.out.println("SetEmptyException");
+            System.out.println("Set Empty Exception");
         }
         return null;
         
