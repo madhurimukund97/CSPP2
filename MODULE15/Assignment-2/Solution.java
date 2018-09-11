@@ -118,27 +118,25 @@ class SortedSet extends Set {
             } else {
                 throw new SetEmptyException("");
             }
-        
         } catch (SetEmptyException se) {
             System.out.println("Set Empty Exception");
         }
-        return null;
-        
+        return null;    
     }
     /**
-     * { function_description }.
+     * { function_description }
      *
      * @return     { description_of_the_return_value }
      *
-     * @throws     Exception  { exception_description }
+     * @throws     SetEmptyException  { exception_description }
      */
-    public int last() throws SetEmptyException{
+    public int last() throws SetEmptyException {
         if (size == 0) {
             throw new SetEmptyException("Set Empty Exception");
             // return -1;
         } else {
             return set[size - 1];
-        }   
+        }
     }
     /**
      * Adds all.
