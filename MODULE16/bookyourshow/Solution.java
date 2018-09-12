@@ -155,13 +155,13 @@ class Show {
     public String[] seatnumbers;
     // public int size;
 
-    Show(String moviename, String movietime, String[] seatnumbers) {
+    Show(String moviename1, String movietime1, String[] seatnumbers1) {
         // final int num = 20;
         // seat_numbers = new int[num];
         // size = 0;
-        this.moviename = moviename;
-        this.movietime = movietime;
-        this.seatnumbers = seatnumbers;
+        this.moviename = moviename1;
+        this.movietime = movietime1;
+        this.seatnumbers = seatnumbers1;
     }
 
     public String getMovieName() {
@@ -198,14 +198,14 @@ class Patron {
     /**
      * Constructs the object.
      *
-     * @param      personname   The personname
-     * @param      mblnumber    The mblnumber
-     * @param      bookedseats  The bookedseats
+     * @param      personname1   The personname
+     * @param      mblnumber1    The mblnumber
+     * @param      bookedseats1  The bookedseats
      */
-    Patron(String personname, String mblnumber, String[] bookedseats) {
-        this.personname = personname;
-        this.mblnumber = mblnumber;
-        this.bookedseats = bookedseats;
+    Patron(String personname1, String mblnumber1, String[] bookedseats1) {
+        this.personname = personname1;
+        this.mblnumber = mblnumber1;
+        this.bookedseats = bookedseats1;
 
     }
     /**
