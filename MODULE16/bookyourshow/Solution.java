@@ -161,16 +161,20 @@ class Show {
     /**
      * { var_description }.
      */
-    public String movietime;
+    private String movietime;
     /**
      * { var_description }.
      */
-    public String[] seatnumbers;
+    private String[] seatnumbers;
     /**
-     * "show".
-    */
-
-    Show(final String moviename1, final String movietime1, final String[] seatnumbers1) {
+     * Constructs the object.
+     *
+     * @param      moviename1    The moviename 1
+     * @param      movietime1    The movietime 1
+     * @param      seatnumbers1  The seatnumbers 1
+     */
+    Show(final String moviename1, final String movietime1,
+        final String[] seatnumbers1) {
         // final int num = 20;
         // seat_numbers = new int[num];
         // size = 0;
