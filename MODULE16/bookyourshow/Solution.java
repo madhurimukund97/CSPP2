@@ -157,10 +157,18 @@ class Show {
     /**
      * { var_description }.
      */
-    public String moviename;
+    private String moviename;
+    /**
+     * { var_description }.
+     */
     public String movietime;
+    /**
+     * { var_description }.
+     */
     public String[] seatnumbers;
-    // public int size;
+    /**
+     * "show".
+    */
 
     Show(final String moviename1, final String movietime1, final String[] seatnumbers1) {
         // final int num = 20;
@@ -195,7 +203,7 @@ class Show {
         return this.seatnumbers;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @return     { description_of_the_return_value }
      */
@@ -212,7 +220,7 @@ class Show {
     public String toString() {
         String s = "";
         s += moviename + "," + movietime + ",";
-        s += Arrays.toString(seatnumbers).replace(", ",",");
+        s += Arrays.toString(seatnumbers).replace(", ", ",");
         return s;
     }
 }
@@ -225,7 +233,13 @@ class Patron {
      * { var_description }.
      */
     private String personname;
+    /**
+     * { var_description }.
+     */
     private String mblnumber;
+    /**
+     * { var_description }.
+     */
     private String[] bookedseats;
     /**
      * Constructs the object.
@@ -234,7 +248,8 @@ class Patron {
      * @param      mblnumber1    The mblnumber
      * @param      bookedseats1  The bookedseats
      */
-    Patron(final String personname1, final String mblnumber1, final String[] bookedseats1) {
+    Patron(final String personname1, final String mblnumber1,
+        final String[] bookedseats1) {
         this.personname = personname1;
         this.mblnumber = mblnumber1;
         this.bookedseats = bookedseats1;
