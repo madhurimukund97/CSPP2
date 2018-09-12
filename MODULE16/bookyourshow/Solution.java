@@ -149,13 +149,20 @@ class BookYourShow {
         }
     }
 }
+
+/**
+ * Class for show.
+ */
 class Show {
+    /**
+     * { var_description }.
+     */
     public String moviename;
     public String movietime;
     public String[] seatnumbers;
     // public int size;
 
-    Show(String moviename1, String movietime1, String[] seatnumbers1) {
+    Show(final String moviename1, final String movietime1, final String[] seatnumbers1) {
         // final int num = 20;
         // seat_numbers = new int[num];
         // size = 0;
@@ -163,23 +170,45 @@ class Show {
         this.movietime = movietime1;
         this.seatnumbers = seatnumbers1;
     }
-
+    /**
+     * Gets the movie name.
+     *
+     * @return     The movie name.
+     */
     public String getMovieName() {
         return this.moviename;
     }
-
+    /**
+     * Gets the date.
+     *
+     * @return     The date.
+     */
     public String getDate() {
         return this.movietime;
     }
-
+    /**
+     * Gets the seats.
+     *
+     * @return     The seats.
+     */
     public String[] getSeats() {
         return this.seatnumbers;
     }
-    public String ExceptTickets() {
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public String excepttickets() {
         String s = "";
         s += moviename + "," + movietime;
         return s;
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         String s = "";
         s += moviename + "," + movietime + ",";
@@ -192,6 +221,9 @@ class Show {
  * Class for patron.
  */
 class Patron {
+    /**
+     * { var_description }.
+     */
     private String personname;
     private String mblnumber;
     private String[] bookedseats;
@@ -202,7 +234,7 @@ class Patron {
      * @param      mblnumber1    The mblnumber
      * @param      bookedseats1  The bookedseats
      */
-    Patron(String personname1, String mblnumber1, String[] bookedseats1) {
+    Patron(final String personname1, final String mblnumber1, final String[] bookedseats1) {
         this.personname = personname1;
         this.mblnumber = mblnumber1;
         this.bookedseats = bookedseats1;
@@ -290,7 +322,7 @@ public final class Solution {
                 case "get":
                     Show show = bys.getAShow(check[1], tokens[1]);
                     if (show != null) {
-                       System.out.println(show.ExceptTickets());
+                       System.out.println(show.excepttickets());
                     } else {
                         System.out.println("No show");
                     }
