@@ -22,7 +22,8 @@ class Item {
      * @param      productquantity1  The productquantity
      * @param      unitPrice1       The unit price
      */
-    public Item(final String productName1, final String productquantity1, final String unitPrice1) {
+    Item(final String productName1, final String productquantity1,
+            final String unitPrice1) {
         this.productName = productName1;
         this.productquantity = Integer.parseInt(productquantity1);
         this.unitPrice = Double.parseDouble(unitPrice1);
@@ -33,7 +34,7 @@ class Item {
      * @param      productName1      The product name
      * @param      productquantity1  The productquantity
      */
-    public Item(final String productName1, final String productquantity1) {
+    Item(final String productName1, final String productquantity1) {
         this.productName = productName1;
         this.productquantity = Integer.parseInt(productquantity1);
     }
@@ -43,8 +44,8 @@ class Item {
      * @return     String representation of the object.
      */
     public String toString() {
-        return this.productName + " " +
-        this.productquantity + " " + this.unitPrice;
+        return this.productName + " "
+            + this.productquantity + " " + this.unitPrice;
     }
     /**
      * { function_description }.
