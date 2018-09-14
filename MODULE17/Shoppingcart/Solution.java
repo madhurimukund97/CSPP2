@@ -1,23 +1,57 @@
 import java.util.*;
-
+/**
+ * Class for item.
+ */
 class Item {
+    /**
+     * { var_description }.
+     */
     String productName;
+    /**
+     * { var_description }.
+     */
     int productquantity;
+    /**
+     * { var_description }.
+     */
     double unitPrice;
+    /**
+     * Constructs the object.
+     *
+     * @param      productName      The product name
+     * @param      productquantity  The productquantity
+     * @param      unitPrice        The unit price
+     */
     public Item(String productName, String productquantity, String unitPrice) {
         this.productName = productName;
         this.productquantity = Integer.parseInt(productquantity);
         this.unitPrice = Double.parseDouble(unitPrice);
     }
+    /**
+     * Constructs the object.
+     *
+     * @param      productName      The product name
+     * @param      productquantity  The productquantity
+     */
     public Item(String productName, String productquantity) {
         this.productName = productName;
         this.productquantity = Integer.parseInt(productquantity);
     }
-
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         return this.productName + " " + this.productquantity+ " " + this.unitPrice;
     }
-
+    /**
+     * { function_description }.
+     *
+     * @param      other  The other
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean equals(Item other) {
         if (!this.productName.equals(other.productName)) {
             return false;
@@ -25,11 +59,15 @@ class Item {
         return true;
     }
 }
+/**
+ * Class for shopping cartesian.
+ */
  class ShoppingCart {
-    int size1;
-    int size2, k = 1;
-    Item[] catalog;
-    Item[] cart;
+    /**
+     * { var_description }.
+     */
+    int size1, size2, k=1;
+    Item[] catalog,cart;
     String[] validCoupons = {"IND10", "IND20", "IND30", "IND50"};
     static double discount = 0.0;
     static boolean couponApplied = false;
@@ -135,7 +173,7 @@ class Item {
                     int num = Integer.parseInt(coupon.substring(3));
                     discount = getTotalAmount() * num/100;
                     valid = true;
-                    // couponApplied = true;
+                    couponApplied = true;
                     k++;
                 }
             }
