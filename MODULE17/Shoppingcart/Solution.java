@@ -98,7 +98,7 @@ class Item {
      *
      * @param      item  The item
      */
-    public void addToCatalog(Item item) {
+    public void addToCatalog(final Item item) {
         catalog[size1++] = item;
     }
     /**
@@ -106,7 +106,7 @@ class Item {
      *
      * @param      item  The item
      */
-    public void addToCart(Item item) {
+    public void addToCart(final Item item) {
         if (!inCart(item)) {
             if (checkCatalog(item)) {
                 cart[size2++] = item;
@@ -120,12 +120,13 @@ class Item {
      *
      * @return     { description_of_the_return_value }
      */
-    private boolean checkCatalog(Item item) {
+    private boolean checkCatalog(final Item item) {
         for (Item i : catalog) {
             if (i != null) {
                 if (i.equals(item)) {
                     if (item.productquantity <= i.productquantity) {
-                        i.productquantity = i.productquantity - item.productquantity;
+                        i.productquantity = i.productquantity
+                        - item.productquantity;
                         return true;
                     }
                 }
@@ -138,12 +139,13 @@ class Item {
      *
      * @param      item  The item
      */
-    public void removeFromCart(Item item) {
+    public void removeFromCart(final Item item) {
         for (int i = 0; i < size2; i++) {
             if (item.equals(cart[i])) {
-                cart[i].productquantity = cart[i].productquantity - item.productquantity;
-            }   
-        }       
+                cart[i].productquantity = cart[i].productquantity
+                    - item.productquantity;
+            }
+        }
     }
     /**
      * { function_description }.
@@ -152,11 +154,12 @@ class Item {
      *
      * @return     { description_of_the_return_value }
      */
-    boolean inCart (Item item) {
+    boolean inCart(final Item item) {
         for (Item s : cart) {
             if (s != null) {
                 if (s.equals(item)) {
-                    s.productquantity = s.productquantity + item.productquantity;
+                    s.productquantity = s.productquantity
+                        + item.productquantity;
                     return true;
                 }
             }
@@ -167,7 +170,7 @@ class Item {
      * Shows the cartesian.
      */
     public void showCart() {
-        for(Item i : cart) {
+        for (Item i : cart) {
             if (i != null) {
                 if (i.productquantity != 0) {
                     System.out.println(i.productName + " " + i.productquantity);
@@ -179,7 +182,7 @@ class Item {
      * Shows the catalog.
      */
     public void showCatalog() {
-        for(Item i : catalog) {
+        for (Item i : catalog) {
             if (i != null) {
                 System.out.println(i);
             }
@@ -192,7 +195,7 @@ class Item {
      *
      * @return     The price.
      */
-    double getPrice(Item item) {
+    double getPrice(final Item item) {
         for (Item i : catalog) {
             if (i != null) {
                 if (i.equals(item)) {
@@ -208,7 +211,7 @@ class Item {
      * @return     The total amount.
      */
     double getTotalAmount() {
-        double total=0;
+        double total = 0;
         for (int i = 0; i < size2; i++) {
             total += cart[i].productquantity * getPrice(cart[i]);
         }
@@ -258,6 +261,9 @@ class Item {
             return;
         }
     }
+    /**
+     * { function_description }.
+     */
     void printInVoice() {
 
         System.out.println("Name   quantity   Price");
