@@ -177,7 +177,7 @@ class Item {
             for (String s : validCoupons) {
                 if (s.equals(coupon)) {
                     int num = Integer.parseInt(coupon.substring(3));
-                    discount = getTotalAmount() * num/100;
+                    discount = getTotalAmount() * num / 100;
                     valid = true;
                     couponApplied = true;
                     k++;
@@ -190,50 +190,59 @@ class Item {
         }
     }
     void printInVoice() {
+
         System.out.println("Name   quantity   Price");
         for (Item i : cart) {
             if (i != null) {
                 if (i.productquantity != 0) {
-            System.out.println(i.productName+ " "+ i.productquantity+ " " + getPrice(i));
+            System.out.println(i.productName + " " + i.productquantity + " " + getPrice(i));
         }
     }
     }
+        final int var1 = 15;
+        final int var2 = 100;
         double total = getTotalAmount();
         double newTotal = total - discount;
-        double tax = newTotal * 15/100;
+        double tax = newTotal * var1 / var2;
         System.out.println("Total:" + getTotalAmount());
-        System.out.println("Disc%:"+discount);
-        System.out.println("Tax:"+ tax);
+        System.out.println("Disc%:" + discount);
+        System.out.println("Tax:" + tax);
         System.out.println("Payable amount: " + getPayableAmount());
     }
-
 }
-
-class Solution {
-    public static void main(String[] args) {
+/**
+ * Class for solution.
+ */
+public class Solution {
+    /**
+     * { function_description }.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         ShoppingCart shop = new ShoppingCart();
         Scanner sc = new Scanner(System.in);
         int lines = Integer.parseInt(sc.nextLine());
-        for (int i=0; i < lines; i++) {
+        for (int i = 0; i < lines; i++) {
             String[] input = sc.nextLine().split(" ");
-            switch(input[0]) {
+            switch (input[0]) {
                 case "catalog":
                 shop.showCatalog();
                 break;
                 case "add":
                 String[] tokens1 = input[1].split(",");
-                shop.addToCart(new Item(tokens1[0],tokens1[1]));
+                shop.addToCart(new Item(tokens1[0], tokens1[1]));
                 break;
                 case "remove":
                 String[] tokens2 = input[1].split(",");
-                shop.removeFromCart(new Item(tokens2[0],tokens2[1]));
+                shop.removeFromCart(new Item(tokens2[0], tokens2[1]));
                 break;
                 case "print":
                 shop.printInVoice();
                 break;
                 case "Item":
                 String[] tokens = input[1].split(",");
-                shop.addToCatalog(new Item(tokens[0],tokens[1],tokens[2]));
+                shop.addToCatalog(new Item(tokens[0], tokens[1], tokens[2]));
                 break;
                 case "show":
                 shop.showCart();
@@ -242,14 +251,15 @@ class Solution {
                 System.out.println("totalAmount: " + shop.getTotalAmount());
                 break;
                 case "payableAmount":
-                System.out.println("Payable amount: " + shop.getPayableAmount());
+                System.out.println("Payable amount: " +
+                    shop.getPayableAmount());
                 break;
                 case "coupon":
                 shop.applyCoupon(input[1]);
                 break;
                 default:
                 break;
-            }    
-        }  
+            }
+        }
     }
 }
