@@ -195,7 +195,8 @@ class Item {
         for (Item i : cart) {
             if (i != null) {
                 if (i.productquantity != 0) {
-            System.out.println(i.productName + " " + i.productquantity + " " + getPrice(i));
+            System.out.println(i.productName + " "
+                + i.productquantity + " " + getPrice(i));
         }
     }
     }
@@ -213,7 +214,13 @@ class Item {
 /**
  * Class for solution.
  */
-public class Solution {
+class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+        // constructor not used.
+    }
     /**
      * { function_description }.
      *
@@ -251,8 +258,8 @@ public class Solution {
                 System.out.println("totalAmount: " + shop.getTotalAmount());
                 break;
                 case "payableAmount":
-                System.out.println("Payable amount: " +
-                    shop.getPayableAmount());
+                System.out.println("Payable amount: " 
+                    + shop.getPayableAmount());
                 break;
                 case "coupon":
                 shop.applyCoupon(input[1]);
