@@ -64,10 +64,16 @@ class Item {
  */
  class ShoppingCart {
     /**
-     * { var_description }.
+     * { item_description }.
      */
     int size1, size2, k=1;
+    /**
+     * { item_description }.
+     */
     Item[] catalog,cart;
+    /**
+     * { var_description }.
+     */
     String[] validCoupons = {"IND10", "IND20", "IND30", "IND50"};
     static double discount = 0.0;
     static boolean couponApplied = false;
@@ -243,9 +249,7 @@ class Solution {
                 break;
                 default:
                 break;
-            }
-            
-        }
-        
+            }    
+        }  
     }
 }
