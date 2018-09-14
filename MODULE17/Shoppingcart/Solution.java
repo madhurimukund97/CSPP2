@@ -172,6 +172,8 @@ class Item {
             // System.out.println("Invalid coupon");
             return;
         }
+        final int var3 = 3;
+        final int var4 = 100;
         boolean valid = false;
         if (k == 1){
             for (String s : validCoupons) {
@@ -258,7 +260,7 @@ class Solution {
                 System.out.println("totalAmount: " + shop.getTotalAmount());
                 break;
                 case "payableAmount":
-                System.out.println("Payable amount: " 
+                System.out.println("Payable amount: "
                     + shop.getPayableAmount());
                 break;
                 case "coupon":
