@@ -66,23 +66,23 @@ class Item {
     /**
      * { item_description }.
      */
-    int size1, size2, k=1;
+    private int size1, size2, k=1;
     /**
      * { item_description }.
      */
-    Item[] catalog,cart;
+    private Item[] catalog, cart;
     /**
      * { var_description }.
      */
-    String[] validCoupons = {"IND10", "IND20", "IND30", "IND50"};
+    private String[] validCoupons = {"IND10", "IND20", "IND30", "IND50"};
     /**
      * { var_description }.
      */
-    static double discount = 0.0;
+    private static double discount = 0.0;
     /**
      * { var_description }.
      */
-    static boolean couponApplied = false;
+    private static boolean couponApplied = false;
     /**
      * Constructs the object.
      */
