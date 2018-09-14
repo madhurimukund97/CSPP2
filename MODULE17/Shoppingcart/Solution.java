@@ -75,24 +75,51 @@ class Item {
      * { var_description }.
      */
     String[] validCoupons = {"IND10", "IND20", "IND30", "IND50"};
+    /**
+     * { var_description }.
+     */
     static double discount = 0.0;
+    /**
+     * { var_description }.
+     */
     static boolean couponApplied = false;
+    /**
+     * Constructs the object.
+     */
     ShoppingCart() {
-        catalog = new Item[20];
-        cart = new Item[20];
+        final int var8 = 20;
+        catalog = new Item[var8];
+        cart = new Item[var8];
         size1 = 0;
         size2 = 0;
     }
+    /**
+     * Adds to catalog.
+     *
+     * @param      item  The item
+     */
     public void addToCatalog(Item item) {
         catalog[size1++] = item;
     }
+    /**
+     * Adds to cartesian.
+     *
+     * @param      item  The item
+     */
     public void addToCart(Item item) {
         if (!inCart(item)) {
-        if (checkCatalog(item)) {
-            cart[size2++] = item;
+            if (checkCatalog(item)) {
+                cart[size2++] = item;
+            }
         }
     }
-    }
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     private boolean checkCatalog(Item item) {
         for (Item i : catalog) {
             if (i != null) {
@@ -105,7 +132,12 @@ class Item {
             }
         }
         return false;
-    } 
+    }
+    /**
+     * Removes a from cartesian.
+     *
+     * @param      item  The item
+     */
     public void removeFromCart(Item item) {
         for (int i = 0; i < size2; i++) {
             if (item.equals(cart[i])) {
@@ -113,6 +145,13 @@ class Item {
             }   
         }       
     }
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     boolean inCart (Item item) {
         for (Item s : cart) {
             if (s != null) {
@@ -124,48 +163,76 @@ class Item {
         }
         return false;
     }
+    /**
+     * Shows the cartesian.
+     */
     public void showCart() {
         for(Item i : cart) {
             if (i != null) {
                 if (i.productquantity != 0) {
-                    System.out.println(i.productName+ " " + i.productquantity);
+                    System.out.println(i.productName + " " + i.productquantity);
                 }
             }
         }
     }
+    /**
+     * Shows the catalog.
+     */
     public void showCatalog() {
         for(Item i : catalog) {
             if (i != null) {
-            System.out.println(i);
-        }
+                System.out.println(i);
+            }
         }
     }
+    /**
+     * Gets the price.
+     *
+     * @param      item  The item
+     *
+     * @return     The price.
+     */
     double getPrice(Item item) {
         for (Item i : catalog) {
             if (i != null) {
-                if(i.equals(item)) {
+                if (i.equals(item)) {
                     return i.unitPrice;
                 }
             }
         }
         return 0.0;
     }
-    double getTotalAmount(){
+    /**
+     * Gets the total amount.
+     *
+     * @return     The total amount.
+     */
+    double getTotalAmount() {
         double total=0;
-        for(int i =0; i< size2; i++){
+        for (int i = 0; i < size2; i++) {
             total += cart[i].productquantity * getPrice(cart[i]);
         }
         return total;
     }
+    /**
+     * Gets the payable amount.
+     *
+     * @return     The payable amount.
+     */
     public double getPayableAmount() {
+        final int var5 = 15;
+        final int var6 = 100;
         double total = getTotalAmount();
         double newTotal = total - discount;
-        double tax = newTotal * 15/100;
+        double tax = newTotal * var5 / var6;
         return newTotal + tax;
-
-
     }
-    public void applyCoupon(String coupon) {
+    /**
+     * { function_description }.
+     *
+     * @param      coupon  The coupon
+     */
+    public void applyCoupon(final String coupon) {
         // double discount = 0.0;
 
         if (couponApplied) {
@@ -175,11 +242,11 @@ class Item {
         final int var3 = 3;
         final int var4 = 100;
         boolean valid = false;
-        if (k == 1){
+        if (k == 1) {
             for (String s : validCoupons) {
                 if (s.equals(coupon)) {
-                    int num = Integer.parseInt(coupon.substring(3));
-                    discount = getTotalAmount() * num / 100;
+                    int num = Integer.parseInt(coupon.substring(var3));
+                    discount = getTotalAmount() * num / var4;
                     valid = true;
                     couponApplied = true;
                     k++;
@@ -216,7 +283,7 @@ class Item {
 /**
  * Class for solution.
  */
-class Solution {
+final class Solution {
     /**
      * Constructs the object.
      */
