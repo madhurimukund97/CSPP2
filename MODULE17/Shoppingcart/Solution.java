@@ -18,24 +18,24 @@ class Item {
     /**
      * Constructs the object.
      *
-     * @param      productName      The product name
-     * @param      productquantity  The productquantity
-     * @param      unitPrice        The unit price
+     * @param      productName1      The product name
+     * @param      productquantity1  The productquantity
+     * @param      unitPrice1       The unit price
      */
-    public Item(String productName, String productquantity, String unitPrice) {
-        this.productName = productName;
-        this.productquantity = Integer.parseInt(productquantity);
-        this.unitPrice = Double.parseDouble(unitPrice);
+    public Item(final String productName1, final String productquantity1, final String unitPrice1) {
+        this.productName = productName1;
+        this.productquantity = Integer.parseInt(productquantity1);
+        this.unitPrice = Double.parseDouble(unitPrice1);
     }
     /**
      * Constructs the object.
      *
-     * @param      productName      The product name
-     * @param      productquantity  The productquantity
+     * @param      productName1      The product name
+     * @param      productquantity1  The productquantity
      */
-    public Item(String productName, String productquantity) {
-        this.productName = productName;
-        this.productquantity = Integer.parseInt(productquantity);
+    public Item(final String productName1, final String productquantity1) {
+        this.productName = productName1;
+        this.productquantity = Integer.parseInt(productquantity1);
     }
     /**
      * Returns a string representation of the object.
@@ -43,7 +43,8 @@ class Item {
      * @return     String representation of the object.
      */
     public String toString() {
-        return this.productName + " " + this.productquantity+ " " + this.unitPrice;
+        return this.productName + " " +
+        this.productquantity + " " + this.unitPrice;
     }
     /**
      * { function_description }.
@@ -52,7 +53,7 @@ class Item {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(Item other) {
+    public boolean equals(final Item other) {
         if (!this.productName.equals(other.productName)) {
             return false;
         }
@@ -66,7 +67,7 @@ class Item {
     /**
      * { item_description }.
      */
-    private int size1, size2, k=1;
+    private int size1, size2, k = 1;
     /**
      * { item_description }.
      */
