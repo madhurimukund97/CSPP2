@@ -135,7 +135,7 @@ class Item {
 					int num = Integer.parseInt(coupon.substring(3));
 					discount = getTotalAmount() * num/100;
 					valid = true;
-					couponApplied = true;
+					// couponApplied = true;
 					k++;
 				}
 			}
@@ -160,7 +160,7 @@ class Item {
 		System.out.println("Total:" + getTotalAmount());
 		System.out.println("Disc%:"+discount);
 		System.out.println("Tax:"+ tax);
-		System.out.println("Payable amount:" + getPayableAmount());
+		System.out.println("Payable amount: " + getPayableAmount());
 	}
 
 }
