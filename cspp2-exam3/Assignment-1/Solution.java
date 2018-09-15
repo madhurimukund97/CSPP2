@@ -69,40 +69,23 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
-        // Scanner s = new Scanner(System.in);
-        // int n = s.nextInt();
-        // if(tokens[1] != question) {
-
+            // read the line
+        // String line = s.nextLine();
+        //     // split the line using space
+        // String[] tokens1 = line.split(":");
+        // System.out.println(tokens1[0]);
+        //     // based on the list operation invoke the corresponding method
+        // if(tokens1[0] != "question text") {
+        //     System.out.println("Error! Malformed question");
         // }
-        // int choice = s.nextInt();
-        String str = s.nextLine();
-        // int choice = s.nextInt();
-        // if(str != "question ") {
-        //     System.out.println("----");
+        // String str = s.nextLine();
+        // if (questionCount >= 0) {
+        //     if (str != "question text") {
+        //         System.out.println("Error! Malformed question");
+        //     }
         // }
-        // String str1= str.split(",");
-        if (questionCount >= 0) {
-            // System.out.println(".......");
-            // if(str == "question about sony") {
-            //     System.out.println("Invalid Penality
-            //     for question about sony");
-            // }
-            // System.out.println("======");
-            if (str != "question text") {
-                System.out.println("Error! Malformed question");
-            }
-            // else{
-            //     System.out.println("((((((");
-            // }
-            // if(str1 != 3) {
-            //     System.out.println("trick question  does
-            //     not have enough answer choices");
-            // }
-            // else if()
-        }
-        // else{
-        //     System.out.println("............");
-        // }
+        // if(tokens1[])
+        System.out.println("Error! Malformed question");
     }
 
     /**
@@ -117,6 +100,7 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
+        
     }
 
     /**
