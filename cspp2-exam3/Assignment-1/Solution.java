@@ -82,7 +82,7 @@ public final class Solution {
             // if(str == "question about sony") {
             //     System.out.println("Invalid Penality for question about sony");
             // }
-            System.out.println("======");
+            // System.out.println("======");
             if(str != "question text") {
                 System.out.println("Error! Malformed question");
             }
