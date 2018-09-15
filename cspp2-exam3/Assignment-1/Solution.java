@@ -85,7 +85,12 @@ public final class Solution {
         //     }
         // }
         // if(tokens1[])
-        System.out.println("Error! Malformed question");
+        if(questionCount == 0) {
+            System.out.println("Quiz does not have questions");
+        }
+        else {
+            System.out.println("Error! Malformed question");
+        }
     }
 
     /**
