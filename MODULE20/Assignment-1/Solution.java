@@ -341,7 +341,7 @@ public final class Solution {
             solution = scan.nextLine();
             quiz.getQuestion(i).setResponse(solution);
         }
-        } catch(Exception e) {
+        } catch (Exception e) {
 
         }
     }
