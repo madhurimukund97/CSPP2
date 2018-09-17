@@ -264,8 +264,8 @@ public final class Solution {
                 return;
             } else if (Integer.parseInt(words[two]) > four) {
                 System.out.println(
-                    "Error! Correct answer choice number is out of" + " " +
-                    "range for question text 1");
+                    "Error! Correct answer choice number is out of" + " "
+                    + "range for question text 1");
                 return;
             } else if (Integer.parseInt(words[three]) <= 0) {
                 System.out.println("Invalid max marks for" + " " + words[0]);
@@ -276,7 +276,8 @@ public final class Solution {
             }
         }
         String[] choices = words[1].split(",");
-        Question quiz1 = new Question(words[0], choices, Integer.parseInt(words[two]),
+        Question quiz1 = new Question(words[0], choices,
+            Integer.parseInt(words[two]),
             Integer.parseInt(words[three]), Integer.parseInt(words[four]));
         quiz.addQuestion(quiz1);
         }
