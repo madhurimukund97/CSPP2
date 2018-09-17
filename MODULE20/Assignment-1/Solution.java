@@ -236,11 +236,6 @@ public final class Solution {
                 System.out.println("|----------------|");
                 System.out.println("| Load Questions |");
                 System.out.println("|----------------|");
-                try {
-                    loadQuestions(s, q, Integer.parseInt(tokens[1]));
-                } catch (Exception e) {
-                    System.out.println(e.getMessage());
-                }
                 break;
                 case "START_QUIZ":
                 System.out.println("|------------|");
