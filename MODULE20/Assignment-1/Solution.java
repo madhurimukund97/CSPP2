@@ -129,7 +129,10 @@ class Question {
      */
     public String toString() {
         String s = "";
-        return s;
+        for (int i = 0; i < choices.length - 1; i++) {
+            s = s + choices[i] + "\t";
+        } 
+        return s + choices[choices.length - 1];
     }
 }
 /**
@@ -186,10 +189,10 @@ class Quiz {
             for (int i = 0; i < size; i++) {
                 System.out.println(questions[i].getQuestionText());
                 if (questions[i].evaluateResponse(questions[i].getResponse())) {
-                    System.out.println("Correct Answer! - Marks Awarded: " + questions[i].getMaxMarks());
+                    System.out.println(" Correct Answer! - Marks Awarded: " + questions[i].getMaxMarks());
                     result = result + questions[i].getMaxMarks();
                 } else {
-                    System.out.println("Wrong Answer! - Penalty: " + questions[i].getPenalty());
+                    System.out.println(" Wrong Answer! - Penalty: " + questions[i].getPenalty());
                     result = result + questions[i].getPenalty();
                 }
             }
@@ -303,6 +306,7 @@ public final class Solution {
             Integer.parseInt(words[three]), Integer.parseInt(words[four]));
         quiz.addQuestion(quiz1);
         }
+        System.out.println(q + " are added to the quiz");
     }
     /**
      * Starts a quiz.
