@@ -54,6 +54,10 @@ class Question {
      * @return     { description_of_the_return_value }
      */
     public boolean evaluateResponse(final String choice) {
+        String[] choiceAnswers = choice.split(" ");
+        if (Integer.parseInt(choiceAnswers[1]) == correctAnswer) {
+            return true;
+        }
         return false;
     }
     /**
@@ -61,8 +65,8 @@ class Question {
      *
      * @return     The correct answer.
      */
-    public String getCorrectAnswer() {
-        return null;
+    public int getCorrectAnswer() {
+        return this.correctAnswer;
     }
     /**
      * Gets the question text.
@@ -70,7 +74,7 @@ class Question {
      * @return     The question text.
      */
     public String getQuestionText() {
-        return null;
+        return this.questiontext;
     }
     /**
      * Gets the choice.
@@ -78,7 +82,7 @@ class Question {
      * @return     The choice.
      */
     public String[] getChoice() {
-        return null;
+        return this.choices;
     }
     /**
      * Gets the maximum marks.
@@ -86,7 +90,7 @@ class Question {
      * @return     The maximum marks.
      */
     public int getMaxMarks() {
-        return 1;
+        return this.maxMarks;
     }
     /**
      * Gets the penalty.
@@ -94,7 +98,7 @@ class Question {
      * @return     The penalty.
      */
     public int getPenalty() {
-        return 1;
+        return this.penalty;
     }
     /**
      * Sets the response.
@@ -102,7 +106,7 @@ class Question {
      * @param      answer  The answer
      */
     public void setResponse(final String answer) {
-
+        response = answer;
     }
     /**
      * Gets the response.
@@ -110,7 +114,7 @@ class Question {
      * @return     The response.
      */
     public String getResponse() {
-        return null;
+        return this.response;
     }
     /**
      * Returns a string representation of the object.
@@ -150,6 +154,7 @@ class Quiz {
      * @param      q     The question
      */
     public void addQuestion(final Question q) {
+
 
     }
     /**
@@ -237,39 +242,42 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
+        final int five = 5;
+        final int two = 2;
+        final int three = 3;
+        final int four = 4;
+        int i;
         if (q == 0) {
             System.out.println("Quiz does not have questions");
         }
-        int i;
         for (i = 0; i < q; i++) {
             String string = scan.nextLine();
             String[] words = string.split(":");
-            String[] choices = words[1].split(",");
-            Question quiz1 = new Question(words[0], choices, Integer.parseInt(words[2]), Integer.parseInt(words[3]),Integer.parseInt(words[4]));
-            quiz.addQuestion(quiz1);
-            if (words.length < 5) {
+            // System.out.println(words.length);
+            if (words.length < five || (words[0].length() == 0)) {
                 System.out.println("Error! Malformed question");
                 return;
-            }else{
-            if (choices.length < 2) {
+            } else {
+            if (words[1].split(",").length < two) {
                 System.out.println(words[0] + " " + "does not have enough answer choices");
                 return;
-            }
-            else if (Integer.parseInt(words[2]) > 4) {
-                System.out.println("Error! Correct answer choice number is out of range for question text 1");
+            } else if (Integer.parseInt(words[two]) > four) {
+                System.out.println(
+                    "Error! Correct answer choice number is out of range for question text 1");
                 return;
-            }
-            else if (Integer.parseInt(words[3]) <= 0) {
+            } else if (Integer.parseInt(words[three]) <= 0) {
                 System.out.println("Invalid max marks for" + " " + words[0]);
                 return;
-            }
-            else if (Integer.parseInt(words[4]) > 0) {
+            } else if (Integer.parseInt(words[four]) > 0) {
                 System.out.println("Invalid penalty for" + " " + words[0]);
                 return;
             }
         }
+        String[] choices = words[1].split(",");
+        Question quiz1 = new Question(words[0], choices, Integer.parseInt(words[two]),
+            Integer.parseInt(words[three]), Integer.parseInt(words[four]));
+        quiz.addQuestion(quiz1);
         }
-
     }
     /**
      * Starts a quiz.
@@ -283,7 +291,11 @@ public final class Solution {
         // write your code here to display the quiz questions on the console.
         // read the user responses from the console using scanner object.
         // store the user respone in the question object
+        // quiz.loadQuestions();
+        // String input = scan.nextLine();
+        // String[] userchoice = input.split(" ");
         
+        // System.out.println(getQuestionText+"("+getMaxMarks+")"+"\n");   
     }
     /**
      * Displays the score report.
