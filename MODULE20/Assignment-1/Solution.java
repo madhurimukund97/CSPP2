@@ -291,7 +291,7 @@ public final class Solution {
             } else {
             if (words[1].split(",").length < two) {
                 System.out.println(words[0] + " "
-                    + " does not have enough answer choices");
+                    + "does not have enough answer choices");
                 return;
             } else if (Integer.parseInt(words[two]) > four) {
                 System.out.println(
@@ -342,7 +342,7 @@ public final class Solution {
             quiz.getQuestion(i).setResponse(solution);
         }
         } catch(Exception e) {
-            
+
         }
     }
     /**
