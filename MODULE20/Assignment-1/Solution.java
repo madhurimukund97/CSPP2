@@ -330,15 +330,19 @@ public final class Solution {
         // String input = scan.nextLine();
         // String[] userchoice = input.split(" ");
         // System.out.println(getQuestionText+"("+getMaxMarks+")"+"\n");
+        try {
         String solution;
         for (int i = 0; i < q; i++) {
             // Question questionnum = quiz.getQuestion(i);
             System.out.println(quiz.getQuestion(i).getQuestionText()
                 + "(" + quiz.getQuestion(i).getMaxMarks() + ")");
             System.out.println(quiz.getQuestion(i).toString());
-            System.out.println("");
+            System.out.println();
             solution = scan.nextLine();
             quiz.getQuestion(i).setResponse(solution);
+        }
+        } catch(Exception e) {
+            
         }
     }
     /**
