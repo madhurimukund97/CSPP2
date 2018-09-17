@@ -131,7 +131,7 @@ class Question {
         String s = "";
         for (int i = 0; i < choices.length - 1; i++) {
             s = s + choices[i] + "\t";
-        } 
+        }
         return s + choices[choices.length - 1];
     }
 }
@@ -189,16 +189,17 @@ class Quiz {
             for (int i = 0; i < size; i++) {
                 System.out.println(questions[i].getQuestionText());
                 if (questions[i].evaluateResponse(questions[i].getResponse())) {
-                    System.out.println(" Correct Answer! - Marks Awarded: " + questions[i].getMaxMarks());
+                    System.out.println(" Correct Answer! - Marks Awarded: "
+                        + questions[i].getMaxMarks());
                     result = result + questions[i].getMaxMarks();
                 } else {
-                    System.out.println(" Wrong Answer! - Penalty: " + questions[i].getPenalty());
+                    System.out.println(" Wrong Answer! - Penalty: "
+                        + questions[i].getPenalty());
                     result = result + questions[i].getPenalty();
                 }
             }
             return "Total Score: " + result;
-        }
-        else {
+        } else {
             return s;
         }
     }
@@ -235,7 +236,11 @@ public final class Solution {
                 System.out.println("|----------------|");
                 System.out.println("| Load Questions |");
                 System.out.println("|----------------|");
-                loadQuestions(s, q, Integer.parseInt(tokens[1]));
+                try {
+                    loadQuestions(s, q, Integer.parseInt(tokens[1]));
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
+                }
                 break;
                 case "START_QUIZ":
                 System.out.println("|------------|");
@@ -274,6 +279,7 @@ public final class Solution {
         int i;
         if (q == 0) {
             System.out.println("Quiz does not have questions");
+            return;
         }
         for (i = 0; i < q; i++) {
             String string = scan.nextLine();
@@ -327,7 +333,8 @@ public final class Solution {
         String solution;
         for (int i = 0; i < q; i++) {
             Question questionnum = quiz.getQuestion(i);
-            System.out.println(questionnum.getQuestionText() + "(" + questionnum.getMaxMarks() + ")");
+            System.out.println(questionnum.getQuestionText()
+                + "(" + questionnum.getMaxMarks() + ")");
             System.out.println(questionnum.toString());
             System.out.println("");
             solution = scan.nextLine();
