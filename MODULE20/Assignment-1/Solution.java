@@ -249,23 +249,23 @@ public final class Solution {
             quiz.addQuestion(quiz1);
             if (words.length < 5) {
                 System.out.println("Error! Malformed question");
-                break;
+                return;
             }else{
             if (choices.length < 2) {
                 System.out.println(words[0] + " " + "does not have enough answer choices");
-                break;
+                return;
             }
-            if (Integer.parseInt(words[2]) > 4) {
+            else if (Integer.parseInt(words[2]) > 4) {
                 System.out.println("Error! Correct answer choice number is out of range for question text 1");
-                break;
+                return;
             }
-            if (Integer.parseInt(words[3]) <= 0) {
+            else if (Integer.parseInt(words[3]) <= 0) {
                 System.out.println("Invalid max marks for" + " " + words[0]);
-                break;
+                return;
             }
-            if (Integer.parseInt(words[4]) > 0) {
+            else if (Integer.parseInt(words[4]) > 0) {
                 System.out.println("Invalid penalty for" + " " + words[0]);
-                break;
+                return;
             }
         }
         }
