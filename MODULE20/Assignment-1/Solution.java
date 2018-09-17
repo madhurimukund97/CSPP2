@@ -259,11 +259,13 @@ public final class Solution {
                 return;
             } else {
             if (words[1].split(",").length < two) {
-                System.out.println(words[0] + " " + "does not have enough answer choices");
+                System.out.println(words[0] + " "
+                    + "does not have enough answer choices");
                 return;
             } else if (Integer.parseInt(words[two]) > four) {
                 System.out.println(
-                    "Error! Correct answer choice number is out of range for question text 1");
+                    "Error! Correct answer choice number is out of" + " " +
+                    "range for question text 1");
                 return;
             } else if (Integer.parseInt(words[three]) <= 0) {
                 System.out.println("Invalid max marks for" + " " + words[0]);
@@ -294,8 +296,7 @@ public final class Solution {
         // quiz.loadQuestions();
         // String input = scan.nextLine();
         // String[] userchoice = input.split(" ");
-        
-        // System.out.println(getQuestionText+"("+getMaxMarks+")"+"\n");   
+        // System.out.println(getQuestionText+"("+getMaxMarks+")"+"\n");
     }
     /**
      * Displays the score report.
