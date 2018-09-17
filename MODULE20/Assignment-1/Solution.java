@@ -236,6 +236,7 @@ public final class Solution {
                 System.out.println("|----------------|");
                 System.out.println("| Load Questions |");
                 System.out.println("|----------------|");
+                loadQuestions(s, q, Integer.parseInt(tokens[1]));
                 break;
                 case "START_QUIZ":
                 System.out.println("|------------|");
