@@ -250,7 +250,7 @@ public final class Solution {
             if (words.length < 5) {
                 System.out.println("Error! Malformed question");
                 break;
-            }
+            }else{
             if (choices.length < 2) {
                 System.out.println(words[0] + " " + "does not have enough answer choices");
                 break;
@@ -267,6 +267,7 @@ public final class Solution {
                 System.out.println("Invalid penalty for" + " " + words[0]);
                 break;
             }
+        }
         }
 
     }
