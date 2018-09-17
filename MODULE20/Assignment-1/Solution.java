@@ -291,7 +291,7 @@ public final class Solution {
             } else {
             if (words[1].split(",").length < two) {
                 System.out.println(words[0] + " "
-                    + "does not have enough answer choices");
+                    + " does not have enough answer choices");
                 return;
             } else if (Integer.parseInt(words[two]) > four) {
                 System.out.println(
@@ -332,13 +332,13 @@ public final class Solution {
         // System.out.println(getQuestionText+"("+getMaxMarks+")"+"\n");
         String solution;
         for (int i = 0; i < q; i++) {
-            Question questionnum = quiz.getQuestion(i);
-            System.out.println(questionnum.getQuestionText()
-                + "(" + questionnum.getMaxMarks() + ")");
-            System.out.println(questionnum.toString());
+            // Question questionnum = quiz.getQuestion(i);
+            System.out.println(quiz.getQuestion(i).getQuestionText()
+                + "(" + quiz.getQuestion(i).getMaxMarks() + ")");
+            System.out.println(quiz.getQuestion(i).toString());
             System.out.println("");
             solution = scan.nextLine();
-            questionnum.setResponse(solution);
+            quiz.getQuestion(i).setResponse(solution);
         }
     }
     /**
