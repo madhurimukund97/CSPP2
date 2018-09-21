@@ -106,9 +106,9 @@ public class Solution {
 
                         }
                         final int hun = 100;
-                        System.out.print((int) ((temp /
-                            (Math.sqrt(res) *
-                                Math.sqrt(res2))) * hun) + "\t\t");
+                        System.out.print((int) ((temp
+                            / (Math.sqrt(res) 
+                            * Math.sqrt(res2))) * hun) + "\t\t");
 
                     } catch (FileNotFoundException e) {
                         System.out.println("File not Found");
