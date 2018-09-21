@@ -9,7 +9,7 @@ public class Solution {
     /**
      * Constructs the object.
      */
-    Solution() {
+    private Solution() {
         //not used constructor.
     }
     /**
@@ -50,7 +50,7 @@ public class Solution {
 
                         String lines;
                         while ((lines = b.readLine()) != null) {
-                            String [] line = lines.replaceAll("[^a-zA-Z0-9_ ]",
+                            String[] line = lines.replaceAll("[^a-zA-Z0-9_ ]",
                                 "").toLowerCase().split(" ");
                             // String[] line = lines.toLowerCase().split(" ");
                             for (String ele : line) {
