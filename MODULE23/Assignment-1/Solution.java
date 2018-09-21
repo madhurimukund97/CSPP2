@@ -71,7 +71,8 @@ public class Solution {
                         }
 
                         while ((lines = b2.readLine()) != null) {
-                            String[] line = lines.replaceAll("[^a-zA-Z0-9_ ]", "").toLowerCase().split(" ");
+                            String[] line = lines.replaceAll(
+                                "[^a-zA-Z0-9_ ]", "").toLowerCase().split(" ");
 
 
                             // String [] line = lines.toLowerCase().split(" ");
@@ -107,7 +108,7 @@ public class Solution {
                         }
                         final int hun = 100;
                         System.out.print((int) ((temp
-                            / (Math.sqrt(res) 
+                            / (Math.sqrt(res)
                             * Math.sqrt(res2))) * hun) + "\t\t");
 
                     } catch (FileNotFoundException e) {
