@@ -6,53 +6,41 @@ import java.util.Arrays;
   */
 class Task {
     // TodoistMain t1[];
-    String title, assignedTo, status;
-    int timeToComplete;
-    Boolean important, urgent;
+    private String title, assignedTo, status;
+    private int timeToComplete;
+    private Boolean important, urgent;
     String imp, ifurgent;
 
-    Task(String title1, String assignedTo1, int timeToComplete1, Boolean important1, Boolean urgent1, String status1) {
+    Task(String title, String assignedTo, int timeToComplete, Boolean important, Boolean urgent, String status) {
         // t1 = new TodoistMain[10];
-        this.title = title1;
-        this.assignedTo = assignedTo1;
-        this.timeToComplete = timeToComplete1;
+        this.title = title;
+        this.assignedTo = assignedTo;
+        this.timeToComplete = timeToComplete;
         // if(important1) {
         //     this.important = "Important";
         // }
         // if(urgent) {
         //     this.ur
         // }
-        this.urgent = urgent1;
-        this.status = status1;
+        this.urgent = urgent;
+        this.status = status;
     }
-    // public String getTitle(String title3) {
-    //     return this.title;
-    // }
-    // public String getassigned(String name) {
-    //     return this.assignedTo;
-    // }
-    // public int getTime(int time3) {
-    //     return this.timeToComplete;
-    // }
-    // public String getimportant(Boolean imp) {
-    //     // boolean getimportant =
-        
-    //     return this.important;
-    // }
-
-    // public Boolean geturgent(Boolean urg) {
-    //     // boolean Urgent = true;
-    //     // boolean false = ;
-
-        
-    //     return th;
-    // }
-    // public String getstatus(String stat) {
-    //     // if (this.status == "todo" || this.status == "done") {
-    //     //     System.out.println(this.status);
-    //     // }
-    //     return this.status;    
-    // }
+    public String getTitle(String title3) {
+        return this.title;
+    }
+    public String getassigned(String name) {
+        return this.assignedTo;
+    }
+    public int getTime(int time3) {
+        return this.timeToComplete;
+    }
+    
+    public String getstatus(String stat) {
+        // if (this.status == "todo" || this.status == "done") {
+        //     System.out.println(this.status);
+        // }
+        return this.status;    
+    }
     public String toString() {
         if (important) {
             imp = "Important";
@@ -66,7 +54,7 @@ class Task {
         else {
             ifurgent = "Not Urgent";
         }
-        return this.title + ", " + this.assignedTo + ", " + this.timeToComplete + ", " +  this.imp + ", " + this.ifurgent + ", " + this.status; 
+        return title + ", " + assignedTo + ", " + timeToComplete + ", " +  imp + ", " + ifurgent + ", " + status; 
     }
 
 }
