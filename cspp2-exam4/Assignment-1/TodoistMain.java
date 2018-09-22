@@ -5,57 +5,68 @@ import java.util.Arrays;
   * write your code below this comment
   */
 class Task {
-    TodoistMain t1[];
+    // TodoistMain t1[];
     String title, assignedTo, status;
     int timeToComplete;
     Boolean important, urgent;
+    String imp, ifurgent;
 
     Task(String title1, String assignedTo1, int timeToComplete1, Boolean important1, Boolean urgent1, String status1) {
-        t1 = new TodoistMain[10];
+        // t1 = new TodoistMain[10];
         this.title = title1;
         this.assignedTo = assignedTo1;
         this.timeToComplete = timeToComplete1;
-        this.important = important1;
+        // if(important1) {
+        //     this.important = "Important";
+        // }
+        // if(urgent) {
+        //     this.ur
+        // }
         this.urgent = urgent1;
         this.status = status1;
     }
-    public String getTitle() {
-        return this.title;
-    }
-    public String getassigned(String name) {
-        return this.assignedTo;
-    }
-    public int getTime(int time3) {
-        return this.timeToComplete;
-    }
-    public Boolean getimportant(Boolean imp) {
-        if (this.important.equals("y")) {
-            System.out.println("Important");
-        }
-        else if (this.important.equals("n")){
-            System.out.println("Not Important");
-            // System.out.println("Not Important");   
-        }
-        // return false;
-        return false;
-    }
+    // public String getTitle(String title3) {
+    //     return this.title;
+    // }
+    // public String getassigned(String name) {
+    //     return this.assignedTo;
+    // }
+    // public int getTime(int time3) {
+    //     return this.timeToComplete;
+    // }
+    // public String getimportant(Boolean imp) {
+    //     // boolean getimportant =
+        
+    //     return this.important;
+    // }
 
-    public Boolean geturgent(Boolean urg) {
-        // boolean true = Urgent;
-        // boolean false = Not Urgent;
-        if (this.urgent.equals("y")) {
-            System.out.println("Urgent");
+    // public Boolean geturgent(Boolean urg) {
+    //     // boolean Urgent = true;
+    //     // boolean false = ;
+
+        
+    //     return th;
+    // }
+    // public String getstatus(String stat) {
+    //     // if (this.status == "todo" || this.status == "done") {
+    //     //     System.out.println(this.status);
+    //     // }
+    //     return this.status;    
+    // }
+    public String toString() {
+        if (important) {
+            imp = "Important";
+        }  
+        else {
+            imp = "Not Important";
         }
-        else if (this.urgent.equals("n")) {
-            System.out.println("Not Urgent");
+        if (urgent) {
+            ifurgent = "Urgent";
+        }  
+        else {
+            ifurgent = "Not Urgent";
         }
-        return false;
-    }
-    public String getstatus(String stat) {
-        return this.status;
-    }
-    public String toString() {    
-        return this.title + ", " + this.assignedTo + ", " + this.timeToComplete + ", " +  this.important + ", " + this.urgent + ", " + this.status; 
+        return title + ", " + assignedTo + ", " + timeToComplete + ", " +  imp + ", " + ifurgent + ", " + status; 
     }
 
 }
@@ -68,9 +79,7 @@ class Todoist {
         size = 0;
     }
     public String addTask(Task t1) {
-        if (t1 == null) {
-            System.out.println("Title not provided");
-        }
+        // t[size++] = t1;
         return null;
     }
     public String getNextTask(String title) {
