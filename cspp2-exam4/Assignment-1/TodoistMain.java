@@ -66,7 +66,7 @@ class Task {
         else {
             ifurgent = "Not Urgent";
         }
-        return title + ", " + assignedTo + ", " + timeToComplete + ", " +  imp + ", " + ifurgent + ", " + status; 
+        return this.title + ", " + this.assignedTo + ", " + this.timeToComplete + ", " +  this.imp + ", " + this.ifurgent + ", " + this.status; 
     }
 
 }
