@@ -8,7 +8,6 @@ class Stringmatch {
     /**
      * Constructs the object.
      */
-
     Stringmatch() {
     }
     /**
@@ -18,12 +17,12 @@ class Stringmatch {
      *
      * @return     String representation of the object.
      */
-    public static String toString(File filename) {
+    public static String toString(final File filename) {
         String str = "";
         try {
             Scanner input = new Scanner(new FileReader(filename));
             StringBuilder sb = new StringBuilder();
-            while(input.hasNext()) {
+            while (input.hasNext()) {
                 sb.append(input.next());
                 sb.append(" ");
             }
@@ -42,7 +41,8 @@ class Stringmatch {
      * @return     { description_of_the_return_value }.
      */
     public static Map removeAll(final String text) {
-        String[] word1 = text.replaceAll("[^a-zA-Z. ]", "").toLowerCase().split(" ");
+        String[] word1 = text.replaceAll(
+            "[^a-zA-Z. ]", "").toLowerCase().split(" ");
 
         //System.out.println(Arrays.toString(wordList1));
         //return Arrays.toString(wordList1);
@@ -68,6 +68,7 @@ class Stringmatch {
      */
     public static double similarString(final String s1, final String s2) {
         final int hun1 = 100;
+        final double hun2 = 100D;
         int rows = s1.length();
         int columns = s2.length();
         double strLength = rows + columns;
@@ -90,7 +91,7 @@ class Stringmatch {
             }
         }
         //System.out.println(result);
-        sim = Math.round(((res *2 ) / strLength) *100D) / 100D;
+        sim = Math.round(((res * 2) / strLength) * hun2) / hun2;
         //System.out.println(stringLength);
         return (sim * hun1);
         }
