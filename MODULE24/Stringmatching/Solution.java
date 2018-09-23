@@ -1,5 +1,12 @@
-import java.util.*;
-import java.io.*;
+import java.util.Scanner;
+import java.lang.StringBuilder;
+import java.util.HashMap;
+import java.util.Map;
+// import java.util.Scanner;
+import java.lang.Math;
+
+import java.io.FileReader;
+import java.io.File;
 
 /**
  * Class for stringmatch.
@@ -28,7 +35,7 @@ class Stringmatch {
             }
             input.close();
             str = sb.toString();
-        } catch (FileNotFoundException e) {
+        } catch (Exception e) {
             System.out.println("no file");
         }
         return str;
@@ -160,7 +167,7 @@ final class Solution {
         System.out.println(res1);
 
 
-    } catch (NoSuchElementException e) {
+    } catch (Exception e) {
         System.out.println("Empty Directory");
     }
 
