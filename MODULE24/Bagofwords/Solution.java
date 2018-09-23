@@ -24,7 +24,7 @@ class Bagofwords {
 	 *
 	 * @return     String representation of the object.
 	 */
-	public static String toString(File filename) {
+	public static String toString(final File filename) {
 		String str = "";
 		try {
 			Scanner input = new Scanner(new FileReader(filename));
@@ -47,8 +47,8 @@ class Bagofwords {
 	 *
 	 * @return     { description_of_the_return_value }
 	 */
-	public static Map removeAll(String text) {
-		String[] wList = text.replaceAll("[^a-zA-Z. ]","").toLowerCase().split(" ");
+	public static Map removeAll(final String text) {
+		String[] wList = text.replaceAll("[^a-zA-Z. ]", "").toLowerCase().split(" ");
 
 		//System.out.println(Arrays.toString(wordList1));
 		//return Arrays.toString(wordList1);
@@ -84,8 +84,8 @@ class Bagofwords {
 		Map<String, Integer> mapTwo = removeAll(doc2);
 		for (String element1:mapOne.keySet()) {
 			for (String element2:mapTwo.keySet()) {
-				if (element1.equals(element2)){
-					numer += mapOne.get(element1)*mapTwo.get(element2);
+				if (element1.equals(element2)) {
+					numer += mapOne.get(element1) * mapTwo.get(element2);
 				}
 			}
 		}
@@ -100,7 +100,7 @@ class Bagofwords {
 		// System.out.println(s2);
 		// System.out.println(numer);
 		// System.out.println(denominator);
-		return (int)((((numer / denominator) * hun2) / hun2) * hun1);
+		return (int) ((((numer / denominator) * hun2) / hun2) * hun1);
 
 
 	}
@@ -115,6 +115,11 @@ final class Solution {
 	private Solution() {
 		//constructor not used.
 	}
+	/**
+	 * { function_description }.
+	 *
+	 * @param      args  The arguments
+	 */
 	public static void main(final String[] args) {
 		try {
 		Bagofwords f = new Bagofwords();
@@ -135,12 +140,15 @@ final class Solution {
 				if (i == j) {
 					res[i][j] = hun;
 				} else {
-				res[i][j] = Bagofwords.similarity(Bagofwords.toString(
-					listoffiles[i]), Bagofwords.toString(listoffiles[j]));
+				res[i][j] = Bagofwords.similarity(
+					Bagofwords.toString(
+					listoffiles[i]),
+				Bagofwords.toString(listoffiles[j]));
 				if (maximum < res[i][j]) {
 					maximum = res[i][j];
-					res1 = "Maximum similarity is in between " +
-					listoffiles[i].getName() + " and " + listoffiles[j].getName();
+					res1 = "Maximum similarity is in between "
+					+ listoffiles[i].getName() 
+					+ " and " + listoffiles[j].getName();
 
 				}
 			}
