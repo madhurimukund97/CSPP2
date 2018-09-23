@@ -8,11 +8,22 @@ import java.util.Map;
 import java.io.FileReader;
 import java.io.File;
 
-
+/**
+ * Class for bagofwords.
+ */
 class Bagofwords {
-
+	/**
+	 * Constructs the object.
+	 */
 	Bagofwords() {
 	}
+	/**
+	 * Returns a string representation of the object.
+	 *
+	 * @param      filename  The filename
+	 *
+	 * @return     String representation of the object.
+	 */
 	public static String toString(File filename) {
 		String str = "";
 		try {
@@ -29,6 +40,13 @@ class Bagofwords {
 		}
 		return str;
 	}
+	/**
+	 * Removes all.
+	 *
+	 * @param      text  The text
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public static Map removeAll(String text) {
 		String[] wList = text.replaceAll("[^a-zA-Z. ]","").toLowerCase().split(" ");
 
@@ -46,8 +64,15 @@ class Bagofwords {
 		//System.out.println(map);
 		return map;
 
-
 	}
+	/**
+	 * { function_description }.
+	 *
+	 * @param      doc1  The document 1
+	 * @param      doc2  The document 2
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public static int similarity(final String doc1, final String doc2) {
 		//System.out.println("hello");
 		final int hun1 = 100;
@@ -80,8 +105,16 @@ class Bagofwords {
 
 	}
 }
-
+/**
+ * { item_description }.
+ */
 final class Solution {
+	/**
+	 * Constructs the object.
+	 */
+	private Solution() {
+		//constructor not used.
+	}
 	public static void main(final String[] args) {
 		try {
 		Bagofwords f = new Bagofwords();
@@ -92,6 +125,7 @@ final class Solution {
 		// for (File name:listoffiles) {
 		// 	System.out.println(name);
 		// }
+		final int hun = 100;
 		int maximum = 0;
 		String res1 = "";
 		int length = listoffiles.length;
@@ -99,12 +133,14 @@ final class Solution {
 		for (int i = 0; i < length; i++) {
 			for (int j = 0; j < length; j++) {
 				if (i == j) {
-					res[i][j] = 100;
+					res[i][j] = hun;
 				} else {
-				res[i][j] = Bagofwords.similarity(Bagofwords.toString(listoffiles[i]),Bagofwords.toString(listoffiles[j]));
+				res[i][j] = Bagofwords.similarity(Bagofwords.toString(
+					listoffiles[i]), Bagofwords.toString(listoffiles[j]));
 				if (maximum < res[i][j]) {
 					maximum = res[i][j];
-					res1 = "Maximum similarity is in between " + listoffiles[i].getName() + " and " + listoffiles[j].getName();
+					res1 = "Maximum similarity is in between " +
+					listoffiles[i].getName() + " and " + listoffiles[j].getName();
 
 				}
 			}
