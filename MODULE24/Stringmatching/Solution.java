@@ -67,6 +67,7 @@ class Stringmatch {
 	 * @return     { description_of_the_return_value }
 	 */
 	public static double similarString(String s1, String s2) {
+		final int hun1 = 100;
 		int rows = s1.length();
 		int columns = s2.length();
 		double strLength = rows + columns;
@@ -91,7 +92,7 @@ class Stringmatch {
 		//System.out.println(result);
 		sim = Math.round(((res*2)/strLength)*100D)/100D;
 		//System.out.println(stringLength);
-		return (sim*100);
+		return (sim*hun1);
 		}
 }
 /**
@@ -110,9 +111,10 @@ class Solution {
 	 *
 	 * @param      args  The arguments
 	 */
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 
 		try {
+		final int hun = 100;
 		Stringmatch f = new Stringmatch();
 		Scanner sc = new Scanner(System.in);
 		// String line = sc.next();
@@ -128,14 +130,16 @@ class Solution {
 		for (int i = 0; i < length; i++) {
 			for (int j = 0; j < length; j++) {
 				if (i == j) {
-					res[i][j] = 100;
+					res[i][j] = hun;
 				} else {
-				res[i][j] = Stringmatch.similarString(Stringmatch.toString(listoffiles[i]),
+				res[i][j] = Stringmatch.similarString(
+					Stringmatch.toString(listoffiles[i]),
 					Stringmatch.toString(listoffiles[j]));
 				if (max < res[i][j]) {
 					max = res[i][j];
 					res1 = "Maximum similarity is in between "
-					+ listoffiles[i].getName() + " and " + listoffiles[j].getName();
+					+ listoffiles[i].getName() + " and "
+					+ listoffiles[j].getName();
 				}
 			}
 			}
