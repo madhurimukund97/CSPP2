@@ -1,11 +1,23 @@
 import java.util.*;
 import java.io.*;
 
-
+/**
+ * Class for stringmatch.
+ */
 class Stringmatch {
+	/**
+	 * Constructs the object.
+	 */
 
 	Stringmatch() {
 	}
+	/**
+	 * Returns a string representation of the object.
+	 *
+	 * @param      filename  The filename
+	 *
+	 * @return     String representation of the object.
+	 */
 	public static String toString(File filename) {
 		String str = "";
 		try {
@@ -22,6 +34,13 @@ class Stringmatch {
 		}
 		return str;
 	}
+	/**
+	 * Removes all.
+	 *
+	 * @param      text  The text
+	 *
+	 * @return     { description_of_the_return_value }.
+	 */
 	public static Map removeAll(String text) {
 		String[] word1 = text.replaceAll("[^a-zA-Z. ]","").toLowerCase().split(" ");
 
@@ -38,9 +57,15 @@ class Stringmatch {
 		}
 		//System.out.println(map);
 		return map;
-
-
 	}
+	/**
+	 * { function_description }.
+	 *
+	 * @param      s1    The s 1
+	 * @param      s2    The s 2
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public static double similarString(String s1, String s2) {
 		int rows = s1.length();
 		int columns = s2.length();
@@ -69,9 +94,22 @@ class Stringmatch {
 		return (sim*100);
 		}
 }
+/**
+ * Class for solution.
+ */
 
 class Solution {
-
+	/**
+	 * Constructs the object.
+	 */
+	private Solution() {
+		// default constructor.
+	}
+	/**
+	 * { function_description }
+	 *
+	 * @param      args  The arguments
+	 */
 	public static void main(String[] args) {
 		try {
 		Stringmatch f = new Stringmatch();
@@ -122,8 +160,5 @@ class Solution {
 		// String stext1 = sc.nextLine().toLowerCase();
 		// String stext2 = sc.nextLine().toLowerCase();
 		// Stringmatch feq = new Stringmatch();
-
-
-
 	}
 }
