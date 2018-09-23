@@ -111,29 +111,31 @@ class Solution {
 	 * @param      args  The arguments
 	 */
 	public static void main(String[] args) {
+
 		try {
 		Stringmatch f = new Stringmatch();
 		Scanner sc = new Scanner(System.in);
 		// String line = sc.next();
-		File input = new File(sc.next());
-		File[] listoffiles = input.listFiles();
+		File inp = new File(sc.next());
+		File[] listoffiles = inp.listFiles();
 		// for (File name:listoffiles) {
 		// 	System.out.println(name);
 		// }
-		double maximum = 0;
-		String result1 = "";
+		double max = 0;
+		String res1 = "";
 		int length = listoffiles.length;
-		double[][] result = new double[length][length];
+		double[][] res = new double[length][length];
 		for (int i = 0; i < length; i++) {
 			for (int j = 0; j < length; j++) {
 				if (i == j) {
-					result[i][j] = 100;
+					res[i][j] = 100;
 				} else {
-				result[i][j] = Stringmatch.similarString(Stringmatch.toString(listoffiles[i]),Stringmatch.toString(listoffiles[j]));
-				if (maximum < result[i][j]) {
-					maximum = result[i][j];
-					result1 = "Maximum similarity is in between " + listoffiles[i].getName() + " and " + listoffiles[j].getName();
-
+				res[i][j] = Stringmatch.similarString(Stringmatch.toString(listoffiles[i]),
+					Stringmatch.toString(listoffiles[j]));
+				if (max < res[i][j]) {
+					max = res[i][j];
+					res1 = "Maximum similarity is in between "
+					+ listoffiles[i].getName() + " and " + listoffiles[j].getName();
 				}
 			}
 			}
@@ -146,14 +148,14 @@ class Solution {
 		for (int i = 0; i < length; i++) {
 			System.out.print(listoffiles[i].getName() + "\t");
 			for (int j = 0; j < length; j++) {
-				System.out.print(result[i][j] + "\t\t");
+				System.out.print(res[i][j] + "\t\t");
 			}
 			System.out.println();
 		}
-		System.out.println(result1);
+		System.out.println(res1);
 
 
-	}catch(NoSuchElementException e) {
+	} catch (NoSuchElementException e) {
 		System.out.println("Empty Directory");
 	}
 
